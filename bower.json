@@ -1,0 +1,33 @@
+{
+  "name": "openshift-jvm",
+  "version": "0.1.0",
+  "keywords": [
+    "hawtio"
+  ],
+  "main": [
+    "dist/openshift-jvm.js",
+    "dist/openshift-jvm.css"
+  ],
+  "ignore": [
+    "dist/openshift-jvm-test.js",
+    "**/.*",
+    "node_modules",
+    "libs",
+    "plugins"
+  ],
+  "dependencies": {
+    "hawtio-core": "~2.0.0",
+    "hawtio-core-navigation": "~2.0.0",
+    "hawtio-utilities": "~2.0.0",
+    "hawtio-jmx": "~2.0.42",
+    "hawtio-wiki": "~2.0.29"
+  },
+  "devDependencies": {
+    "bootstrap": "~3.3.1",
+    "patternfly": "~1.1.2",
+    "hawtio-core-dts": "~2.0.0"
+  },
+  "resolutions": {
+    "lodash": "~3.2.0"
+  }
+}
