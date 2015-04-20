@@ -214,6 +214,23 @@ gulp.task('connect', ['watch'], function() {
   var kube = uri(process.env.KUBERNETES_MASTER || 'http://localhost:8080');
   console.log("Connecting to Kubernetes on: " + kube);
   */
+  var staticAssets = [{
+      path: '/',
+      dir: '.'
+  }];
+
+  var dirs = fs.readdirSync('./libs');
+  dirs.forEach(function(dir) {
+    var dir = './libs/' + dir;
+    console.log("dir: ", dir);
+    if (fs.statSync(dir).isDirectory()) {
+      console.log("Adding directory to search path: ", dir);
+      staticAssets.push({
+        path: '/',
+        dir: dir
+      });
+    }
+  });
 
   hawtio.setConfig({
     port: 2772,
@@ -242,11 +259,7 @@ gulp.task('connect', ['watch'], function() {
     }
     */
     ],
-    staticAssets: [{
-      path: '/',
-      dir: '.'
-
-    }],
+    staticAssets: staticAssets,
     fallback: 'index.html',
     liveReload: {
       enabled: true
