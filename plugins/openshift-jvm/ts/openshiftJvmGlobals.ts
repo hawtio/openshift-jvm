@@ -13,11 +13,12 @@
 /// See the License for the specific language governing permissions and
 /// limitations under the License.
 
-/// <reference path="examplePlugin.ts"/>
-module Example {
+/// <reference path="../../includes.ts"/>
+module OpenshiftJvm {
 
-  export var Page1Controller = _module.controller("Example.Page1Controller", ["$scope", ($scope) => {
-    $scope.target = "World!";
-  }]);
+  export var pluginName = "openshift-jvm";
 
+  export var log: Logging.Logger = Logger.get(pluginName);
+
+  export var templatePath = "plugins/openshift-jvm/html";
 }

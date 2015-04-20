@@ -14,11 +14,30 @@
 /// limitations under the License.
 
 /// <reference path="../../includes.ts"/>
-module Example {
+/// <reference path="openshiftJvmGlobals.ts"/>
+module OpenshiftJvm {
 
-  export var pluginName = "hawtio-assembly";
+  export var _module = angular.module(pluginName, []);
 
-  export var log: Logging.Logger = Logger.get(pluginName);
+  /*
+  _module.config(["$locationProvider", "$routeProvider", "HawtioNavBuilderProvider",
+    ($locationProvider, $routeProvider: ng.route.IRouteProvider, builder: HawtioMainNav.BuilderFactory) => {
+  }]);
+  */
 
-  export var templatePath = "plugins/example/html";
+  _module.run(["HawtioNav", (nav:HawtioMainNav.Registry) => {
+    nav.on(HawtioMainNav.Actions.CHANGED, pluginName, (items) => {
+      items.forEach((item) => {
+        switch(item.id) {
+          case 'jvm':
+          case 'wiki':
+            item.isValid = () => false;
+        }
+      });
+    });
+    log.debug("loaded");
+  }]);
+
+
+  hawtioPluginLoader.addModule(pluginName);
 }

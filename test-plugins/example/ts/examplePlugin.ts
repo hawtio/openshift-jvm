@@ -17,6 +17,8 @@
 /// <reference path="exampleGlobals.ts"/>
 module DevExample {
 
+  /*
+
   export var _module = angular.module(DevExample.pluginName, []);
 
   var tab = undefined;
@@ -39,4 +41,6 @@ module DevExample {
 
 
   hawtioPluginLoader.addModule(DevExample.pluginName);
+
+  */
 }

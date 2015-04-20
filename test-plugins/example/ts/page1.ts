@@ -16,8 +16,10 @@
 /// <reference path="examplePlugin.ts"/>
 module DevExample {
 
+  /*
   export var Page1Controller = _module.controller("DevExample.Page1Controller", ["$scope", ($scope) => {
     $scope.target = "World!";
   }]);
+  */
 
 }

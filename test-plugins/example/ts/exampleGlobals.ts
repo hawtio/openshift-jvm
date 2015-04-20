@@ -15,10 +15,12 @@
 
 /// <reference path="../../includes.ts"/>
 module DevExample {
+  /*
 
   export var pluginName = "hawtio-test-plugin";
 
   export var log: Logging.Logger = Logger.get(pluginName);
 
   export var templatePath = "test-plugins/example/html";
+  */
 }
