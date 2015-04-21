@@ -293,7 +293,7 @@ gulp.task('reload', function() {
     .pipe(hawtio.reload());
 });
 
-gulp.task('site', ['clean', 'build'], function() {
+gulp.task('site', function() {
   gulp.src('index.html')
     .pipe(plugins.rename('404.html'))
     .pipe(gulp.dest('site'));
