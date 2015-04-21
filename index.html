@@ -209,10 +209,11 @@
 
   </head>
 
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-pf" role="navigation">
+  <body ng-controller="OpenshiftJvm.MainController">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-pf" role="navigation" ng-cloak>
       <div class="navbar-header">
-        <span class="navbar-brand">Connected to "Local JVM"</span>
+        <h4 class="navbar-brand" ng-bind="containerName"></h4>
+        <span class="navbar-brand"><a href="" ng-click="goBack()">Back</a></span>
         <!--
         <a class="navbar-brand"><img src="img/hawtio_logo.svg"></a>
         -->
