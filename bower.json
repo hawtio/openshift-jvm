@@ -11,8 +11,7 @@
   "ignore": [
     "dist/openshift-jvm-test.js",
     "node_modules",
-    "libs",
-    "plugins"
+    "libs"
   ],
   "dependencies": {
     "hawtio-core": "~2.0.0",
