@@ -10,7 +10,6 @@
   ],
   "ignore": [
     "dist/openshift-jvm-test.js",
-    "**/.*",
     "node_modules",
     "libs",
     "plugins"
