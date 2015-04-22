@@ -3,6 +3,9 @@
 LATEST=`cat LATEST`
 CURRENT=`git tag --list | grep -v build | tail -n 1`
 
+echo "Latest on disk: $LATEST"
+echo "Latest in repo: $CURRENT"
+
 if [ "$CURRENT" != "$LATEST" ]
 then
   echo "Deploying new build"
