@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LATEST=`cat LATEST`
-CURRENT=`git tag --list | tail -n 1`
+CURRENT=`git tag --list | grep -v build | tail -n 1`
 
 if [ "$CURRENT" != "$LATEST" ]
 then
