@@ -2,15 +2,6 @@
 
 git fetch --tags
 git tag -d v1.0.3-build-build 
-git push origin :refs/tags/v1.0.3-build-build
-git tag -d v1.0.3-build-build-build
-git push origin :refs/tags/v1.0.3-build-build-build
-git tag -d v1.0.3-build-build-build-build
-git push origin :refs/tags/v1.0.3-build-build-build-build
-git tag -d v1.0.3-build-build-build-build-build
-git push origin :refs/tags/v1.0.3-build-build-build-build-build
-git tag -d v1.0.3-build-build-build-build-build-build
-git push origin :refs/tags/v1.0.3-build-build-build-build-build-build
 
 LATEST=`cat LATEST`
 CURRENT=`git tag --list | grep -v build | tail -n 1`
