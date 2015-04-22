@@ -14,6 +14,7 @@ then
   echo "Deploying new build"
   git config --global user.email "circleci@mail.com" && \
   git config --global user.name "circleci" && \
+  rm -Rf site/* && \
   gulp site && \
   gulp deploy && \
   pushd .publish && \

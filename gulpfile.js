@@ -204,9 +204,47 @@ gulp.task('watch', ['build', 'build-example'], function() {
   });
   plugins.watch(config.less, function(){
     gulp.start('less', 'reload');
-  })
+  });
 });
 
+gulp.task('serve-site', function() {
+  var staticAssets = [{
+      path: '/',
+      dir: 'site/'
+  }];
+  var dirs = fs.readdirSync('site/libs');
+  dirs.forEach(function(dir) {
+    dir = 'site/libs/' + dir;
+    console.log("dir: ", dir);
+    if (fs.statSync(dir).isDirectory()) {
+      console.log("Adding directory to search path: ", dir);
+      staticAssets.push({
+        path: '/',
+        dir: dir
+      });
+    }
+  });
+  hawtio.setConfig({
+    port: 2772,
+    staticProxies: [
+    {
+      port: 8282,
+      path: '/jolokia',
+      targetPath: '/hawtio/jolokia'
+    }
+    ],
+    staticAssets: staticAssets,
+    fallback: 'index.html',
+    liveReload: {
+      enabled: false
+    }
+  });
+  hawtio.listen(function(server) {
+    var host = server.address().address;
+    var port = server.address().port;
+    console.log("started from gulp file at ", host, ":", port);
+  });
+});
 
 gulp.task('connect', ['watch'], function() {
   /*
@@ -293,12 +331,7 @@ gulp.task('reload', function() {
     .pipe(hawtio.reload());
 });
 
-gulp.task('clean-site', function() {
-  gulp.src('site/*')
-    .pipe(plugins.clean());
-});
-
-gulp.task('usemin', ['clean-site'], function() {
+gulp.task('usemin', function() {
   gulp.src('index.html')
     .pipe(plugins.usemin({
       css: [plugins.minifyCss(), 'concat'],
@@ -318,18 +351,20 @@ gulp.task('site', ['usemin'], function() {
     .pipe(gulp.dest('site'));
 
   var dirs = fs.readdirSync('./libs');
+  var patterns = [];
   dirs.forEach(function(dir) {
     var path = './libs/' + dir + "/img";
     try {
       if (fs.statSync(path).isDirectory()) {
         console.log("found image dir: " + path);
         var pattern = 'libs/' + dir + "/img/**";
-        gulp.src([pattern]).pipe(gulp.dest('site/img'));
+        patterns.push(pattern);
       }
     } catch (e) {
       // ignore, file does not exist
     }
   });
+  gulp.src(patterns).pipe(plugins.debug({ title: 'img-copy' })).pipe(gulp.dest('site/img'));
 });
 
 gulp.task('deploy', function() {
