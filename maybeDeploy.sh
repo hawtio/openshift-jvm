@@ -16,6 +16,7 @@ then
   git push && git push --tags && \
   popd && \
   echo $CURRENT > LATEST && \
+  git add LATEST && \
   git commit -m "Updating latest tag" && \
   git push
 else
