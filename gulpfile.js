@@ -234,7 +234,7 @@ gulp.task('serve-site', function() {
     }
     ],
     staticAssets: staticAssets,
-    fallback: 'index.html',
+    fallback: 'site/404.html',
     liveReload: {
       enabled: false
     }
@@ -331,8 +331,34 @@ gulp.task('reload', function() {
     .pipe(hawtio.reload());
 });
 
-gulp.task('usemin', function() {
-  gulp.src('index.html')
+gulp.task('site-fonts', function() {
+  return gulp.src(['libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf'], { base: '.' })
+    .pipe(plugins.flatten())
+    .pipe(plugins.debug({title: 'site font files'}))
+    .pipe(gulp.dest('site/fonts'));
+});
+
+gulp.task('tweak-open-sans', ['site-fonts'], function() {
+  return gulp.src('site/fonts/OpenSans*')
+    .pipe(plugins.flatten())
+    .pipe(gulp.dest('site/fonts/Open-Sans'));
+});
+
+gulp.task('tweak-droid-sans-mono', ['site-fonts'], function() {
+  return gulp.src('site/fonts/DroidSansMono*')
+    .pipe(plugins.flatten())
+    .pipe(gulp.dest('site/fonts/Droid-Sans-Mono'));
+});
+
+gulp.task('site-files', ['tweak-open-sans', 'tweak-droid-sans-mono'], function() {
+  return gulp.src(['images/**', 'img/**', 'libs/**/*.swf'], {base: '.'})
+    .pipe(plugins.debug({title: 'site files'}))
+    .pipe(gulp.dest('site'));
+
+});
+
+gulp.task('usemin', ['site-files'], function() {
+  return gulp.src('index.html')
     .pipe(plugins.usemin({
       css: [plugins.minifyCss(), 'concat'],
       js: [plugins.uglify(), plugins.rev()]
@@ -347,8 +373,10 @@ gulp.task('site', ['usemin'], function() {
     .pipe(plugins.rename('404.html'))
     .pipe(gulp.dest('site'));
 
-  gulp.src(['images/**', 'img/**', 'libs/**/*.swf', 'libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf'], {base: '.'})
-    .pipe(gulp.dest('site'));
+    /*
+  gulp.src([], {base: '.'})
+    .pipe(gulp.dest('site/fonts'));
+    */
 
   var dirs = fs.readdirSync('./libs');
   var patterns = [];
@@ -364,7 +392,7 @@ gulp.task('site', ['usemin'], function() {
       // ignore, file does not exist
     }
   });
-  gulp.src(patterns).pipe(plugins.debug({ title: 'img-copy' })).pipe(gulp.dest('site/img'));
+  return gulp.src(patterns).pipe(plugins.debug({ title: 'img-copy' })).pipe(gulp.dest('site/img'));
 });
 
 gulp.task('deploy', function() {
