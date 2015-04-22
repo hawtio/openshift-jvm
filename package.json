@@ -25,5 +25,8 @@
     "vinyl-map": "^1.0.1",
     "which": "^1.0.8",
     "wiredep": "^2.2.2"
+  },
+  "dependencies": {
+    "gulp-gh-pages": "^0.5.1"
   }
 }
