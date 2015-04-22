@@ -8,7 +8,6 @@ then
   echo "Deploying new build"
   git config --global user.email "circleci@mail.com" && \
   git config --global user.name "circleci" && \
-  gulp build && \
   gulp site && \
   gulp deploy && \
   pushd .publish && \
