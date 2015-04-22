@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git fetch --tags
+
 LATEST=`cat LATEST`
 CURRENT=`git tag --list | grep -v build | tail -n 1`
 
