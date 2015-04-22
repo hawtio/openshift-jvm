@@ -17,7 +17,7 @@ then
   echo $CURRENT > LATEST && \
   git add LATEST && \
   git commit -m "Updating latest tag" && \
-  git push
+  git push && git push --tags
 else
   echo "Not deploying new build"
 fi
