@@ -293,12 +293,28 @@ gulp.task('reload', function() {
     .pipe(hawtio.reload());
 });
 
-gulp.task('site', function() {
+gulp.task('clean-site', function() {
+  gulp.src('site/*')
+    .pipe(plugins.clean());
+});
+
+gulp.task('usemin', ['clean-site'], function() {
   gulp.src('index.html')
+    .pipe(plugins.usemin({
+      css: [plugins.minifyCss(), 'concat'],
+      js: [plugins.uglify(), plugins.rev()]
+    }))
+    .pipe(plugins.debug({title: 'usemin'}))
+    .pipe(gulp.dest('site'));
+});
+
+gulp.task('site', ['usemin'], function() {
+
+  gulp.src('site/index.html')
     .pipe(plugins.rename('404.html'))
     .pipe(gulp.dest('site'));
 
-  gulp.src(['index.html', 'css/**', 'images/**', 'img/**', 'libs/**/*.js', 'libs/**/*.css', 'libs/**/*.swf', 'libs/**/*.woff','libs/**/*.woff2', 'libs/**/*.ttf', 'libs/**/*.map', 'dist/**'], {base: '.'})
+  gulp.src(['images/**', 'img/**', 'libs/**/*.swf', 'libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf'], {base: '.'})
     .pipe(gulp.dest('site'));
 
   var dirs = fs.readdirSync('./libs');
