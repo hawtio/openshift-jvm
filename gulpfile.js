@@ -209,7 +209,7 @@ gulp.task('watch', ['build', 'build-example'], function() {
 
 gulp.task('serve-site', function() {
   var staticAssets = [{
-      path: '/',
+      path: '/console/java',
       dir: 'site/'
   }];
   var dirs = fs.readdirSync('site/libs');
@@ -219,7 +219,7 @@ gulp.task('serve-site', function() {
     if (fs.statSync(dir).isDirectory()) {
       console.log("Adding directory to search path: ", dir);
       staticAssets.push({
-        path: '/',
+        path: '/console/java',
         dir: dir
       });
     }
@@ -253,7 +253,7 @@ gulp.task('connect', ['watch'], function() {
   console.log("Connecting to Kubernetes on: " + kube);
   */
   var staticAssets = [{
-      path: '/',
+      path: '/console/java',
       dir: '.'
   }];
 
@@ -264,7 +264,7 @@ gulp.task('connect', ['watch'], function() {
     if (fs.statSync(dir).isDirectory()) {
       console.log("Adding directory to search path: ", dir);
       staticAssets.push({
-        path: '/',
+        path: '/console/java',
         dir: dir
       });
     }
