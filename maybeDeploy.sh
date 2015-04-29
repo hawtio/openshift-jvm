@@ -14,7 +14,7 @@ git tag -d v1.0.3-build-build-build-build-build-build
 git push origin :refs/tags/v1.0.3-build-build-build-build-build-build
 
 LATEST=`cat LATEST`
-CURRENT=`git tag --list | grep -v build | tail -n 1`
+CURRENT=`git tag --list | grep -v build | sort --version-sort | tail -n 1`
 
 echo "Latest on disk: $LATEST"
 echo "Latest in repo: $CURRENT"
