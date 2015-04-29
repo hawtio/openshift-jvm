@@ -333,34 +333,35 @@ gulp.task('reload', function() {
 
 gulp.task('site-fonts', function() {
   return gulp.src(['libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf'], { base: '.' })
-    .pipe(plugins.flatten())
+    //.pipe(plugins.flatten())
     .pipe(plugins.debug({title: 'site font files'}))
-    .pipe(gulp.dest('site/fonts'));
+    .pipe(gulp.dest('site/'));
 });
 
 gulp.task('tweak-open-sans', ['site-fonts'], function() {
-  return gulp.src('site/fonts/OpenSans*')
+  return gulp.src('site/libs/**/OpenSans*')
     .pipe(plugins.flatten())
-    .pipe(gulp.dest('site/fonts/Open-Sans'));
+    .pipe(gulp.dest('site/'));
 });
 
 gulp.task('tweak-droid-sans-mono', ['site-fonts'], function() {
-  return gulp.src('site/fonts/DroidSansMono*')
+  return gulp.src('site/libs/DroidSansMono*')
     .pipe(plugins.flatten())
-    .pipe(gulp.dest('site/fonts/Droid-Sans-Mono'));
+    .pipe(gulp.dest('site/'));
 });
 
 gulp.task('site-files', ['tweak-open-sans', 'tweak-droid-sans-mono'], function() {
   return gulp.src(['images/**', 'img/**', 'libs/**/*.swf'], {base: '.'})
     .pipe(plugins.debug({title: 'site files'}))
     .pipe(gulp.dest('site'));
-
 });
 
 gulp.task('usemin', ['site-files'], function() {
   return gulp.src('index.html')
     .pipe(plugins.usemin({
-      css: [plugins.minifyCss(), 'concat'],
+      css: [plugins.minifyCss({
+        keepBreaks: true                       
+      }), 'concat'],
       js: [plugins.uglify(), plugins.rev()]
     }))
     .pipe(plugins.debug({title: 'usemin'}))
