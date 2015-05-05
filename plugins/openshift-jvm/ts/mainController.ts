@@ -17,11 +17,13 @@
 module OpenshiftJvm {
 
   _module.controller("OpenshiftJvm.MainController", ['$scope', 'ConnectOptions', ($scope, ConnectOptions) => {
-    $scope.containerName = ConnectOptions.name;
-    $scope.goBack = () => {
-      log.debug("Connect options: ", ConnectOptions);
-      window.location.href = ConnectOptions.returnTo;
-    };
+    $scope.containerName = ConnectOptions.name || "Untitled Container";
+    if (ConnectOptions.returnTo) {
+      $scope.goBack = () => {
+        log.debug("Connect options: ", ConnectOptions);
+        window.location.href = ConnectOptions.returnTo;
+      };
+    }
   }]);
 
 }

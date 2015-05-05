@@ -90,6 +90,8 @@
     <script src="libs/hawtio-integration/dist/metrics-watcher.js"></script>
     <script src="libs/hawtio-integration/dist/camelModel.js"></script>
     <script src="libs/hawtio-integration/dist/hawtio-integration.js"></script>
+    <script src="libs/hawtio-extension-service/dist/hawtio-extension-service.js"></script>
+    <script src="libs/hawtio-preferences/dist/hawtio-preferences.js"></script>
     <!-- endbower -->
 
     <script type="text/javascript" src="libs/codemirror/addon/edit/closetag.js"></script>
@@ -114,10 +116,10 @@
 
     <style>
       body {
-        padding-top: 110px;
+        padding-top: 120px;
       }
       .pane {
-        top: 110px;
+        top: 120px;
       }
       .navbar-brand > img {
         height: 20px;
@@ -226,6 +228,28 @@
         position: relative;
         margin: -1px 0 0;
       }
+
+      .navbar-brand img {
+        display: inline-block !important;
+        margin-top: -10px;
+      }
+
+      .navbar-brand h4 {
+        display: inline-block !important;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 2em;
+        margin-right: 1em;
+      }
+
+      .navbar-utility, 
+      .navbar-utility li, 
+      .navbar-utility li a {
+        height: 34px;
+      }
+      .navbar-utility li a {
+        padding-top: 10px !important;
+      }
     </style>
 
   </head>
@@ -233,12 +257,27 @@
   <body ng-controller="OpenshiftJvm.MainController">
     <nav class="navbar navbar-default navbar-fixed-top navbar-pf" role="navigation" ng-cloak>
       <div class="navbar-header">
-        <h4 class="navbar-brand" ng-bind="containerName"></h4>
-        <span class="navbar-brand"><a href="" ng-click="goBack()">Back</a></span>
+        <span class="navbar-brand">
+          <img src="img/hawtio_logo.svg">
+          <h4 ng-bind="containerName"></h4>
+          <span ng-show="goBack"><a href="" ng-click="goBack()">Back</a></span>
+        </span>
         <!--
         <a class="navbar-brand"><img src="img/hawtio_logo.svg"></a>
         -->
       </div>
+      <ul class="nav navbar-nav navbar-utility" hawtio-extension name="hawtio-user">
+        <!--
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="pficon pficon-user"></span>
+            User <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" hawtio-extension name="hawtio-user">
+          </ul>
+        </li>
+        -->
+      </ul>
       <ul class="nav navbar-nav navbar-primary" hawtio-main-nav></ul>
       <ul class="nav navbar-nav navbar-persistent" hawtio-sub-tabs></ul>
     </nav>
