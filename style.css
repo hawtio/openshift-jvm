@@ -59,7 +59,7 @@ select{background:#fff!important}
 }
 .img-thumbnail,body{background-color:#fff}
 .btn,.btn-danger.active,.btn-danger:active,.btn-default.active,.btn-default:active,.btn-info.active,.btn-info:active,.btn-primary.active,.btn-primary:active,.btn-warning.active,.btn-warning:active,.btn.active,.btn:active,.dropdown-menu>.disabled>a:focus,.dropdown-menu>.disabled>a:hover,.form-control,.navbar-toggle,.open>.dropdown-toggle.btn-danger,.open>.dropdown-toggle.btn-default,.open>.dropdown-toggle.btn-info,.open>.dropdown-toggle.btn-primary,.open>.dropdown-toggle.btn-warning{background-image:none}
-@font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix)format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2)format('woff2'),url(../fonts/glyphicons-halflings-regular.woff)format('woff'),url(../fonts/glyphicons-halflings-regular.ttf)format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)format('svg')}
+@font-face{font-family:'Glyphicons Halflings';src:url(fonts/glyphicons-halflings-regular.eot);src:url(fonts/glyphicons-halflings-regular.eot?#iefix)format('embedded-opentype'),url(fonts/glyphicons-halflings-regular.woff2)format('woff2'),url(fonts/glyphicons-halflings-regular.woff)format('woff'),url(fonts/glyphicons-halflings-regular.ttf)format('truetype'),url(fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)format('svg')}
 .glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .glyphicon-asterisk:before{content:"\2a"}
 .glyphicon-plus:before{content:"\2b"}
@@ -1950,7 +1950,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 .collapse.in{display:block}
 .caret,.glyphicon{display:inline-block}
 .collapsing{height:0;overflow:hidden;-webkit-transition:height .35s ease;transition:height .35s ease}
-@font-face{font-family:'Glyphicons Halflings';src:url(../../components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot);src:url(../../components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix)format('embedded-opentype'),url(../../components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff)format('woff'),url(../../components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf)format('truetype'),url(../../components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)format('svg')}
+@font-face{font-family:'Glyphicons Halflings';src:url(../components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot);src:url(../components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot?#iefix)format('embedded-opentype'),url(../components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff)format('woff'),url(../components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf)format('truetype'),url(../components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)format('svg')}
 .glyphicon{top:1px;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased}
 .dropdown-header,.dropdown-menu>li>a{display:block;line-height:1.66666667}
 .glyphicon-asterisk:before{content:"\2a"}
@@ -2712,7 +2712,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-@font-face{font-family:FontAwesome;src:url(../../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0);src:url(../../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0)format('embedded-opentype'),url(../../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0)format('woff'),url(../../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0)format('truetype'),url(../../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular)format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:FontAwesome;src:url(../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0);src:url(../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0)format('embedded-opentype'),url(../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0)format('woff'),url(../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0)format('truetype'),url(../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular)format('svg');font-weight:400;font-style:normal}
 .fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased}
 .fa-lg{font-size:1.3333333333333333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}
@@ -3414,11 +3414,11 @@ table.datatable th:active{outline:0}
 .dropdown-submenu>a:after{content:"\f105";position:absolute;right:10px;top:2px}
 .dropdown-submenu>.dropdown-menu{left:100%;margin-top:0;top:-6px}
 .dropup .dropdown-submenu>.dropdown-menu{bottom:-5px;top:auto}
-@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:url(../fonts/OpenSans-Light-webfont.eot);src:url(../fonts/OpenSans-Light-webfont.eot?#iefix)format('embedded-opentype'),url(../fonts/OpenSans-Light-webfont.woff)format('woff'),url(../fonts/OpenSans-Light-webfont.ttf)format('truetype'),url(../fonts/OpenSans-Light-webfont.svg#OpenSansLight)format('svg')}
-@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:url(../fonts/OpenSans-Regular-webfont.eot);src:url(../fonts/OpenSans-Regular-webfont.eot?#iefix)format('embedded-opentype'),url(../fonts/OpenSans-Regular-webfont.woff)format('woff'),url(../fonts/OpenSans-Regular-webfont.ttf)format('truetype'),url(../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular)format('svg')}
-@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:url(../fonts/OpenSans-Semibold-webfont.eot);src:url(../fonts/OpenSans-Semibold-webfont.eot?#iefix)format('embedded-opentype'),url(../fonts/OpenSans-Semibold-webfont.woff)format('woff'),url(../fonts/OpenSans-Semibold-webfont.ttf)format('truetype'),url(../fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold)format('svg')}
-@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:url(../fonts/OpenSans-Bold-webfont.eot);src:url(../fonts/OpenSans-Bold-webfont.eot?#iefix)format('embedded-opentype'),url(../fonts/OpenSans-Bold-webfont.woff)format('woff'),url(../fonts/OpenSans-Bold-webfont.ttf)format('truetype'),url(../fonts/OpenSans-Bold-webfont.svg#OpenSansBold)format('svg')}
-@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:url(../fonts/OpenSans-ExtraBold-webfont.eot);src:url(../fonts/OpenSans-ExtraBold-webfont.eot?#iefix)format('embedded-opentype'),url(../fonts/OpenSans-ExtraBold-webfont.woff)format('woff'),url(../fonts/OpenSans-ExtraBold-webfont.ttf)format('truetype'),url(../fonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold)format('svg')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:url(fonts/OpenSans-Light-webfont.eot);src:url(fonts/OpenSans-Light-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Light-webfont.woff)format('woff'),url(fonts/OpenSans-Light-webfont.ttf)format('truetype'),url(fonts/OpenSans-Light-webfont.svg#OpenSansLight)format('svg')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:url(fonts/OpenSans-Regular-webfont.eot);src:url(fonts/OpenSans-Regular-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Regular-webfont.woff)format('woff'),url(fonts/OpenSans-Regular-webfont.ttf)format('truetype'),url(fonts/OpenSans-Regular-webfont.svg#OpenSansRegular)format('svg')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;src:url(fonts/OpenSans-Semibold-webfont.eot);src:url(fonts/OpenSans-Semibold-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Semibold-webfont.woff)format('woff'),url(fonts/OpenSans-Semibold-webfont.ttf)format('truetype'),url(fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold)format('svg')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:url(fonts/OpenSans-Bold-webfont.eot);src:url(fonts/OpenSans-Bold-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Bold-webfont.woff)format('woff'),url(fonts/OpenSans-Bold-webfont.ttf)format('truetype'),url(fonts/OpenSans-Bold-webfont.svg#OpenSansBold)format('svg')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:800;src:url(fonts/OpenSans-ExtraBold-webfont.eot);src:url(fonts/OpenSans-ExtraBold-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-ExtraBold-webfont.woff)format('woff'),url(fonts/OpenSans-ExtraBold-webfont.ttf)format('truetype'),url(fonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold)format('svg')}
 .form-control[disabled],.form-control[readonly],fieldset[disabled] .form-control{border-color:#d4d4d4!important;-webkit-box-shadow:none;box-shadow:none;color:#969696}
 .form-control:hover{border-color:#7bb2dd}
 .has-error .form-control:hover{border-color:#843534}
@@ -3426,7 +3426,7 @@ table.datatable th:active{outline:0}
 .has-warning .form-control:hover{border-color:#bb6106}
 .input-group .input-group-btn .btn{-webkit-box-shadow:none;box-shadow:none}
 label{font-weight:600}
-@font-face{font-family:PatternFlyIcons-webfont;src:url(../fonts/PatternFlyIcons-webfont.eot);src:url(../fonts/PatternFlyIcons-webfont.eot?#iefix)format('embedded-opentype'),url(../fonts/PatternFlyIcons-webfont.ttf)format('truetype'),url(../fonts/PatternFlyIcons-webfont.woff)format('woff'),url(../fonts/PatternFlyIcons-webfont.svg#PatternFlyIcons-webfont)format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:PatternFlyIcons-webfont;src:url(fonts/PatternFlyIcons-webfont.eot);src:url(fonts/PatternFlyIcons-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/PatternFlyIcons-webfont.ttf)format('truetype'),url(fonts/PatternFlyIcons-webfont.woff)format('woff'),url(fonts/PatternFlyIcons-webfont.svg#PatternFlyIcons-webfont)format('svg');font-weight:400;font-style:normal}
 [class*="-exclamation"]{color:#fff}
 [class*=" pficon-"],[class^=pficon-]{display:inline-block;font-family:PatternFlyIcons-webfont;font-style:normal;font-variant:normal;font-weight:400;line-height:1;speak:none;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .pficon-layered{position:relative}
@@ -3496,7 +3496,7 @@ h1 .label,h2 .label,h3 .label,h4 .label,h5 .label,h6 .label{font-size:75%}
 @media (min-width:768px){.login-pf #brand img{margin:0;text-align:left}
 }
 .login-pf #badge{display:block;margin:20px auto 70px;position:relative;text-align:center}
-.login-pf body{background:url(../img/bg-login.jpg)50% 0 repeat-x #080808;background-size:auto}
+.login-pf body{background:url(img/bg-login.jpg)50% 0 repeat-x #080808;background-size:auto}
 .login-pf .container{background-color:#181818;background-color:rgba(255,255,255,.055);clear:right;color:#fff;padding-bottom:40px;padding-top:20px;width:auto}
 @media (min-width:768px){.login-pf #badge{float:right;margin-right:64px;margin-top:50px}
 .login-pf body{background-size:100% auto}
@@ -3509,9 +3509,9 @@ h1 .label,h2 .label,h3 .label,h4 .label,h5 .label,h6 .label{font-size:75%}
 .login-pf .container .form-horizontal .control-label{font-size:13px;font-weight:400;text-align:left}
 .login-pf .container .help-block{color:#fff}
 .login-pf .container .submit{text-align:right}
-.ie8.login-pf #badge{background:url(../img/logo.png)no-repeat;height:69px;width:73px}
+.ie8.login-pf #badge{background:url(img/logo.png)no-repeat;height:69px;width:73px}
 .ie8.login-pf #badge img,.ie8.login-pf #brand img{width:0}
-.ie8.login-pf #brand{background:url(../img/brand-lg.png)center no-repeat;background-size:cover auto}
+.ie8.login-pf #brand{background:url(img/brand-lg.png)center no-repeat;background-size:cover auto}
 @media (min-width:768px){.login-pf .container .details{border-left:1px solid #474747;padding-left:40px}
 .login-pf .container .details p:first-child{border-top:0;padding-top:0;margin-top:0}
 .login-pf .container .login{padding-right:40px}
@@ -3526,7 +3526,7 @@ h1 .label,h2 .label,h3 .label,h4 .label,h5 .label,h6 .label{font-size:75%}
 .modal-footer>.btn>.fa-angle-right{margin-left:5px}
 .navbar-pf{background:#030303;border:0;border-radius:0;border-top:3px solid #199dde;min-height:0}
 .navbar-pf .navbar-brand{color:#f1f1f1;height:auto;padding:12px 0;margin:0 0 0 20px}
-.ie8 .navbar-pf .navbar-brand{background:url(../img/brand.png)0 49% no-repeat;min-width:270px}
+.ie8 .navbar-pf .navbar-brand{background:url(img/brand.png)0 49% no-repeat;min-width:270px}
 .navbar-pf .navbar-brand img{display:block}
 .ie8 .navbar-pf .navbar-brand img{height:10px;width:0}
 .navbar-pf .navbar-collapse{border-top:0;-webkit-box-shadow:none;box-shadow:none;padding:0}
@@ -3757,10 +3757,10 @@ to{transform:rotate(359deg)}
 .spinner.spinner-lg{border-width:5px;height:30px;width:30px}
 .spinner.spinner-sm{border-width:3px;height:18px;width:18px}
 .spinner.spinner-xs{border-width:2px;height:12px;width:12px}
-.ie8 .spinner,.ie9 .spinner{background:url(../img/spinner.gif)no-repeat;border:0}
-.ie8 .spinner.spinner-lg,.ie9 .spinner.spinner-lg{background-image:url(../img/spinner-lg.gif)}
-.ie8 .spinner.spinner-sm,.ie9 .spinner.spinner-sm{background-image:url(../img/spinner-sm.gif)}
-.ie8 .spinner.spinner-xs,.ie9 .spinner.spinner-xs{background-image:url(../img/spinner-xs.gif)}
+.ie8 .spinner,.ie9 .spinner{background:url(img/spinner.gif)no-repeat;border:0}
+.ie8 .spinner.spinner-lg,.ie9 .spinner.spinner-lg{background-image:url(img/spinner-lg.gif)}
+.ie8 .spinner.spinner-sm,.ie9 .spinner.spinner-sm{background-image:url(img/spinner-sm.gif)}
+.ie8 .spinner.spinner-xs,.ie9 .spinner.spinner-xs{background-image:url(img/spinner-xs.gif)}
 .prettyprint .atn,.prettyprint .com,.prettyprint .fun,.prettyprint .var{color:#3f9c35}
 .prettyprint .atv,.prettyprint .str{color:#a30000}
 .prettyprint .clo,.prettyprint .dec,.prettyprint .kwd,.prettyprint .opn,.prettyprint .pln,.prettyprint .pun{color:#333}
@@ -3888,13 +3888,52 @@ div.CodeMirror-cursors{visibility:hidden;position:relative;z-index:3}
 }
 .cm-tab-wrap-hack:after{content:''}
 span.CodeMirror-selectedtext{background:0 0}
+.toast-title{font-weight:700}
+.toast-message{-ms-word-wrap:break-word;word-wrap:break-word}
+.toast-message a,.toast-message label{color:#fff}
+.toast-message a:hover{color:#ccc;text-decoration:none}
+.toast-close-button{position:relative;right:-.3em;top:-.3em;float:right;font-size:20px;font-weight:700;color:#fff;-webkit-text-shadow:0 1px 0 #fff;text-shadow:0 1px 0 #fff;opacity:.8;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);filter:alpha(opacity=80)}
+.toast-close-button:focus,.toast-close-button:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.4;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=40);filter:alpha(opacity=40)}
+button.toast-close-button{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}
+.toast-top-center{top:0;right:0;width:100%}
+.toast-bottom-center{bottom:0;right:0;width:100%}
+.toast-top-full-width{top:0;right:0;width:100%}
+.toast-bottom-full-width{bottom:0;right:0;width:100%}
+.toast-top-left{top:12px;left:12px}
+.toast-top-right{top:12px;right:12px}
+.toast-bottom-right{right:12px;bottom:12px}
+.toast-bottom-left{bottom:12px;left:12px}
+#toast-container{position:fixed;z-index:999999}
+#toast-container *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+#toast-container>div{position:relative;overflow:hidden;margin:0 0 6px;padding:15px 15px 15px 50px;width:300px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;background-position:15px center;background-repeat:no-repeat;-moz-box-shadow:0 0 12px #999;-webkit-box-shadow:0 0 12px #999;box-shadow:0 0 12px #999;color:#fff;opacity:.8;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);filter:alpha(opacity=80)}
+#toast-container>:hover{-moz-box-shadow:0 0 12px #000;-webkit-box-shadow:0 0 12px #000;box-shadow:0 0 12px #000;opacity:1;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);filter:alpha(opacity=100);cursor:pointer}
+#toast-container>.toast-info{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVEhLtZa9SgNBEMc9sUxxRcoUKSzSWIhXpFMhhYWFhaBg4yPYiWCXZxBLERsLRS3EQkEfwCKdjWJAwSKCgoKCcudv4O5YLrt7EzgXhiU3/4+b2ckmwVjJSpKkQ6wAi4gwhT+z3wRBcEz0yjSseUTrcRyfsHsXmD0AmbHOC9Ii8VImnuXBPglHpQ5wwSVM7sNnTG7Za4JwDdCjxyAiH3nyA2mtaTJufiDZ5dCaqlItILh1NHatfN5skvjx9Z38m69CgzuXmZgVrPIGE763Jx9qKsRozWYw6xOHdER+nn2KkO+Bb+UV5CBN6WC6QtBgbRVozrahAbmm6HtUsgtPC19tFdxXZYBOfkbmFJ1VaHA1VAHjd0pp70oTZzvR+EVrx2Ygfdsq6eu55BHYR8hlcki+n+kERUFG8BrA0BwjeAv2M8WLQBtcy+SD6fNsmnB3AlBLrgTtVW1c2QN4bVWLATaIS60J2Du5y1TiJgjSBvFVZgTmwCU+dAZFoPxGEEs8nyHC9Bwe2GvEJv2WXZb0vjdyFT4Cxk3e/kIqlOGoVLwwPevpYHT+00T+hWwXDf4AJAOUqWcDhbwAAAAASUVORK5CYII=)!important}
+#toast-container>.toast-error{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVEhLrZa/SgNBEMZzh0WKCClSCKaIYOED+AAKeQQLG8HWztLCImBrYadgIdY+gIKNYkBFSwu7CAoqCgkkoGBI/E28PdbLZmeDLgzZzcx83/zZ2SSXC1j9fr+I1Hq93g2yxH4iwM1vkoBWAdxCmpzTxfkN2RcyZNaHFIkSo10+8kgxkXIURV5HGxTmFuc75B2RfQkpxHG8aAgaAFa0tAHqYFfQ7Iwe2yhODk8+J4C7yAoRTWI3w/4klGRgR4lO7Rpn9+gvMyWp+uxFh8+H+ARlgN1nJuJuQAYvNkEnwGFck18Er4q3egEc/oO+mhLdKgRyhdNFiacC0rlOCbhNVz4H9FnAYgDBvU3QIioZlJFLJtsoHYRDfiZoUyIxqCtRpVlANq0EU4dApjrtgezPFad5S19Wgjkc0hNVnuF4HjVA6C7QrSIbylB+oZe3aHgBsqlNqKYH48jXyJKMuAbiyVJ8KzaB3eRc0pg9VwQ4niFryI68qiOi3AbjwdsfnAtk0bCjTLJKr6mrD9g8iq/S/B81hguOMlQTnVyG40wAcjnmgsCNESDrjme7wfftP4P7SP4N3CJZdvzoNyGq2c/HWOXJGsvVg+RA/k2MC/wN6I2YA2Pt8GkAAAAASUVORK5CYII=)!important}
+#toast-container>.toast-success{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVEhLY2AYBfQMgf///3P8+/evAIgvA/FsIF+BavYDDWMBGroaSMMBiE8VC7AZDrIFaMFnii3AZTjUgsUUWUDA8OdAH6iQbQEhw4HyGsPEcKBXBIC4ARhex4G4BsjmweU1soIFaGg/WtoFZRIZdEvIMhxkCCjXIVsATV6gFGACs4Rsw0EGgIIH3QJYJgHSARQZDrWAB+jawzgs+Q2UO49D7jnRSRGoEFRILcdmEMWGI0cm0JJ2QpYA1RDvcmzJEWhABhD/pqrL0S0CWuABKgnRki9lLseS7g2AlqwHWQSKH4oKLrILpRGhEQCw2LiRUIa4lwAAAABJRU5ErkJggg==)!important}
+#toast-container>.toast-warning{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL5ZSvTsNQFMbXZGICMYGYmJhAQIJAICYQPAACiSDB8AiICQQJT4CqQEwgJvYASAQCiZiYmJhAIBATCARJy+9rTsldd8sKu1M0+dLb057v6/lbq/2rK0mS/TRNj9cWNAKPYIJII7gIxCcQ51cvqID+GIEX8ASG4B1bK5gIZFeQfoJdEXOfgX4QAQg7kH2A65yQ87lyxb27sggkAzAuFhbbg1K2kgCkB1bVwyIR9m2L7PRPIhDUIXgGtyKw575yz3lTNs6X4JXnjV+LKM/m3MydnTbtOKIjtz6VhCBq4vSm3ncdrD2lk0VgUXSVKjVDJXJzijW1RQdsU7F77He8u68koNZTz8Oz5yGa6J3H3lZ0xYgXBK2QymlWWA+RWnYhskLBv2vmE+hBMCtbA7KX5drWyRT/2JsqZ2IvfB9Y4bWDNMFbJRFmC9E74SoS0CqulwjkC0+5bpcV1CZ8NMej4pjy0U+doDQsGyo1hzVJttIjhQ7GnBtRFN1UarUlH8F3xict+HY07rEzoUGPlWcjRFRr4/gChZgc3ZL2d8oAAAAASUVORK5CYII=)!important}
+#toast-container.toast-bottom-center>div,#toast-container.toast-top-center>div{width:300px;margin:auto}
+#toast-container.toast-bottom-full-width>div,#toast-container.toast-top-full-width>div{width:96%;margin:auto}
+.toast{background-color:#030303}
+.toast-success{background-color:#51a351}
+.toast-error{background-color:#bd362f}
+.toast-info{background-color:#2f96b4}
+.toast-warning{background-color:#f89406}
+.toast-progress{position:absolute;left:0;bottom:0;height:4px;background-color:#000;opacity:.4;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=40);filter:alpha(opacity=40)}
+@media all and (max-width:240px){#toast-container>div{padding:8px 8px 8px 50px;width:11em}
+#toast-container .toast-close-button{right:-.2em;top:-.2em}
+}
+@media all and (min-width:241px)and (max-width:480px){#toast-container>div{padding:8px 8px 8px 50px;width:18em}
+#toast-container .toast-close-button{right:-.2em;top:-.2em}
+}
+@media all and (min-width:481px)and (max-width:768px){#toast-container>div{padding:15px 15px 15px 50px;width:25em}
+}
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 .fa,.fa-stack{display:inline-block}
 .fa-fw,.fa-li{text-align:center}
-@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.eot?v=4.3.0);src:url(../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0)format('embedded-opentype'),url(../fonts/fontawesome-webfont.woff2?v=4.3.0)format('woff2'),url(../fonts/fontawesome-webfont.woff?v=4.3.0)format('woff'),url(../fonts/fontawesome-webfont.ttf?v=4.3.0)format('truetype'),url(../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular)format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:FontAwesome;src:url(fonts/fontawesome-webfont.eot?v=4.3.0);src:url(fonts/fontawesome-webfont.eot?#iefix&v=4.3.0)format('embedded-opentype'),url(fonts/fontawesome-webfont.woff2?v=4.3.0)format('woff2'),url(fonts/fontawesome-webfont.woff?v=4.3.0)format('woff'),url(fonts/fontawesome-webfont.ttf?v=4.3.0)format('truetype'),url(fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular)format('svg');font-weight:400;font-style:normal}
 .fa{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0,0)}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}
@@ -4449,45 +4488,6 @@ span.CodeMirror-selectedtext{background:0 0}
 .fa-train:before{content:"\f238"}
 .fa-subway:before{content:"\f239"}
 .fa-medium:before{content:"\f23a"}
-.toast-title{font-weight:700}
-.toast-message{-ms-word-wrap:break-word;word-wrap:break-word}
-.toast-message a,.toast-message label{color:#fff}
-.toast-message a:hover{color:#ccc;text-decoration:none}
-.toast-close-button{position:relative;right:-.3em;top:-.3em;float:right;font-size:20px;font-weight:700;color:#fff;-webkit-text-shadow:0 1px 0 #fff;text-shadow:0 1px 0 #fff;opacity:.8;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);filter:alpha(opacity=80)}
-.toast-close-button:focus,.toast-close-button:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.4;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=40);filter:alpha(opacity=40)}
-button.toast-close-button{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}
-.toast-top-center{top:0;right:0;width:100%}
-.toast-bottom-center{bottom:0;right:0;width:100%}
-.toast-top-full-width{top:0;right:0;width:100%}
-.toast-bottom-full-width{bottom:0;right:0;width:100%}
-.toast-top-left{top:12px;left:12px}
-.toast-top-right{top:12px;right:12px}
-.toast-bottom-right{right:12px;bottom:12px}
-.toast-bottom-left{bottom:12px;left:12px}
-#toast-container{position:fixed;z-index:999999}
-#toast-container *{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
-#toast-container>div{position:relative;overflow:hidden;margin:0 0 6px;padding:15px 15px 15px 50px;width:300px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;background-position:15px center;background-repeat:no-repeat;-moz-box-shadow:0 0 12px #999;-webkit-box-shadow:0 0 12px #999;box-shadow:0 0 12px #999;color:#fff;opacity:.8;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);filter:alpha(opacity=80)}
-#toast-container>:hover{-moz-box-shadow:0 0 12px #000;-webkit-box-shadow:0 0 12px #000;box-shadow:0 0 12px #000;opacity:1;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);filter:alpha(opacity=100);cursor:pointer}
-#toast-container>.toast-info{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGwSURBVEhLtZa9SgNBEMc9sUxxRcoUKSzSWIhXpFMhhYWFhaBg4yPYiWCXZxBLERsLRS3EQkEfwCKdjWJAwSKCgoKCcudv4O5YLrt7EzgXhiU3/4+b2ckmwVjJSpKkQ6wAi4gwhT+z3wRBcEz0yjSseUTrcRyfsHsXmD0AmbHOC9Ii8VImnuXBPglHpQ5wwSVM7sNnTG7Za4JwDdCjxyAiH3nyA2mtaTJufiDZ5dCaqlItILh1NHatfN5skvjx9Z38m69CgzuXmZgVrPIGE763Jx9qKsRozWYw6xOHdER+nn2KkO+Bb+UV5CBN6WC6QtBgbRVozrahAbmm6HtUsgtPC19tFdxXZYBOfkbmFJ1VaHA1VAHjd0pp70oTZzvR+EVrx2Ygfdsq6eu55BHYR8hlcki+n+kERUFG8BrA0BwjeAv2M8WLQBtcy+SD6fNsmnB3AlBLrgTtVW1c2QN4bVWLATaIS60J2Du5y1TiJgjSBvFVZgTmwCU+dAZFoPxGEEs8nyHC9Bwe2GvEJv2WXZb0vjdyFT4Cxk3e/kIqlOGoVLwwPevpYHT+00T+hWwXDf4AJAOUqWcDhbwAAAAASUVORK5CYII=)!important}
-#toast-container>.toast-error{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVEhLrZa/SgNBEMZzh0WKCClSCKaIYOED+AAKeQQLG8HWztLCImBrYadgIdY+gIKNYkBFSwu7CAoqCgkkoGBI/E28PdbLZmeDLgzZzcx83/zZ2SSXC1j9fr+I1Hq93g2yxH4iwM1vkoBWAdxCmpzTxfkN2RcyZNaHFIkSo10+8kgxkXIURV5HGxTmFuc75B2RfQkpxHG8aAgaAFa0tAHqYFfQ7Iwe2yhODk8+J4C7yAoRTWI3w/4klGRgR4lO7Rpn9+gvMyWp+uxFh8+H+ARlgN1nJuJuQAYvNkEnwGFck18Er4q3egEc/oO+mhLdKgRyhdNFiacC0rlOCbhNVz4H9FnAYgDBvU3QIioZlJFLJtsoHYRDfiZoUyIxqCtRpVlANq0EU4dApjrtgezPFad5S19Wgjkc0hNVnuF4HjVA6C7QrSIbylB+oZe3aHgBsqlNqKYH48jXyJKMuAbiyVJ8KzaB3eRc0pg9VwQ4niFryI68qiOi3AbjwdsfnAtk0bCjTLJKr6mrD9g8iq/S/B81hguOMlQTnVyG40wAcjnmgsCNESDrjme7wfftP4P7SP4N3CJZdvzoNyGq2c/HWOXJGsvVg+RA/k2MC/wN6I2YA2Pt8GkAAAAASUVORK5CYII=)!important}
-#toast-container>.toast-success{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADsSURBVEhLY2AYBfQMgf///3P8+/evAIgvA/FsIF+BavYDDWMBGroaSMMBiE8VC7AZDrIFaMFnii3AZTjUgsUUWUDA8OdAH6iQbQEhw4HyGsPEcKBXBIC4ARhex4G4BsjmweU1soIFaGg/WtoFZRIZdEvIMhxkCCjXIVsATV6gFGACs4Rsw0EGgIIH3QJYJgHSARQZDrWAB+jawzgs+Q2UO49D7jnRSRGoEFRILcdmEMWGI0cm0JJ2QpYA1RDvcmzJEWhABhD/pqrL0S0CWuABKgnRki9lLseS7g2AlqwHWQSKH4oKLrILpRGhEQCw2LiRUIa4lwAAAABJRU5ErkJggg==)!important}
-#toast-container>.toast-warning{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGYSURBVEhL5ZSvTsNQFMbXZGICMYGYmJhAQIJAICYQPAACiSDB8AiICQQJT4CqQEwgJvYASAQCiZiYmJhAIBATCARJy+9rTsldd8sKu1M0+dLb057v6/lbq/2rK0mS/TRNj9cWNAKPYIJII7gIxCcQ51cvqID+GIEX8ASG4B1bK5gIZFeQfoJdEXOfgX4QAQg7kH2A65yQ87lyxb27sggkAzAuFhbbg1K2kgCkB1bVwyIR9m2L7PRPIhDUIXgGtyKw575yz3lTNs6X4JXnjV+LKM/m3MydnTbtOKIjtz6VhCBq4vSm3ncdrD2lk0VgUXSVKjVDJXJzijW1RQdsU7F77He8u68koNZTz8Oz5yGa6J3H3lZ0xYgXBK2QymlWWA+RWnYhskLBv2vmE+hBMCtbA7KX5drWyRT/2JsqZ2IvfB9Y4bWDNMFbJRFmC9E74SoS0CqulwjkC0+5bpcV1CZ8NMej4pjy0U+doDQsGyo1hzVJttIjhQ7GnBtRFN1UarUlH8F3xict+HY07rEzoUGPlWcjRFRr4/gChZgc3ZL2d8oAAAAASUVORK5CYII=)!important}
-#toast-container.toast-bottom-center>div,#toast-container.toast-top-center>div{width:300px;margin:auto}
-#toast-container.toast-bottom-full-width>div,#toast-container.toast-top-full-width>div{width:96%;margin:auto}
-.toast{background-color:#030303}
-.toast-success{background-color:#51a351}
-.toast-error{background-color:#bd362f}
-.toast-info{background-color:#2f96b4}
-.toast-warning{background-color:#f89406}
-.toast-progress{position:absolute;left:0;bottom:0;height:4px;background-color:#000;opacity:.4;-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=40);filter:alpha(opacity=40)}
-@media all and (max-width:240px){#toast-container>div{padding:8px 8px 8px 50px;width:11em}
-#toast-container .toast-close-button{right:-.2em;top:-.2em}
-}
-@media all and (min-width:241px)and (max-width:480px){#toast-container>div{padding:8px 8px 8px 50px;width:18em}
-#toast-container .toast-close-button{right:-.2em;top:-.2em}
-}
-@media all and (min-width:481px)and (max-width:768px){#toast-container>div{padding:15px 15px 15px 50px;width:25em}
-}
 @font-face{font-family:OpenSans;src:url(fonts/OpenSans-Light-webfont.eot);src:url(fonts/OpenSans-Light-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Light-webfont.woff)format('woff'),url(fonts/OpenSans-Light-webfont.ttf)format('truetype');font-weight:300;font-style:normal}
 @font-face{font-family:OpenSans;src:url(fonts/OpenSans-LightItalic-webfont.eot);src:url(fonts/OpenSans-LightItalic-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-LightItalic-webfont.woff)format('woff'),url(fonts/OpenSans-LightItalic-webfont.ttf)format('truetype');font-weight:300;font-style:italic}
 @font-face{font-family:OpenSans;src:url(fonts/OpenSans-Regular-webfont.eot);src:url(fonts/OpenSans-Regular-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Regular-webfont.woff)format('woff'),url(fonts/OpenSans-Regular-webfont.ttf)format('truetype');font-weight:400;font-style:normal}
@@ -4498,7 +4498,18 @@ button.toast-close-button{padding:0;cursor:pointer;background:0 0;border:0;-webk
 @font-face{font-family:OpenSans;src:url(fonts/OpenSans-BoldItalic-webfont.eot);src:url(fonts/OpenSans-BoldItalic-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-BoldItalic-webfont.woff)format('woff'),url(fonts/OpenSans-BoldItalic-webfont.ttf)format('truetype');font-weight:700;font-style:italic}
 @font-face{font-family:OpenSans;src:url(fonts/OpenSans-ExtraBold-webfont.eot);src:url(fonts/OpenSans-ExtraBold-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-ExtraBold-webfont.woff)format('woff'),url(fonts/OpenSans-ExtraBold-webfont.ttf)format('truetype');font-weight:800;font-style:normal}
 @font-face{font-family:OpenSans;src:url(fonts/OpenSans-ExtraBoldItalic-webfont.eot);src:url(fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-ExtraBoldItalic-webfont.woff)format('woff'),url(fonts/OpenSans-ExtraBoldItalic-webfont.ttf)format('truetype');font-weight:800;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Light-webfont.eot);src:url(fonts/OpenSans-Light-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Light-webfont.woff)format('woff'),url(fonts/OpenSans-Light-webfont.ttf)format('truetype');font-weight:300;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-LightItalic-webfont.eot);src:url(fonts/OpenSans-LightItalic-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-LightItalic-webfont.woff)format('woff'),url(fonts/OpenSans-LightItalic-webfont.ttf)format('truetype');font-weight:300;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Regular-webfont.eot);src:url(fonts/OpenSans-Regular-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Regular-webfont.woff)format('woff'),url(fonts/OpenSans-Regular-webfont.ttf)format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Italic-webfont.eot);src:url(fonts/OpenSans-Italic-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Italic-webfont.woff)format('woff'),url(fonts/OpenSans-Italic-webfont.ttf)format('truetype');font-weight:400;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Semibold-webfont.eot);src:url(fonts/OpenSans-Semibold-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Semibold-webfont.woff)format('woff'),url(fonts/OpenSans-Semibold-webfont.ttf)format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-SemiboldItalic-webfont.eot);src:url(fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-SemiboldItalic-webfont.woff)format('woff'),url(fonts/OpenSans-SemiboldItalic-webfont.ttf)format('truetype');font-weight:600;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Bold-webfont.eot);src:url(fonts/OpenSans-Bold-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-Bold-webfont.woff)format('woff'),url(fonts/OpenSans-Bold-webfont.ttf)format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-BoldItalic-webfont.eot);src:url(fonts/OpenSans-BoldItalic-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-BoldItalic-webfont.woff)format('woff'),url(fonts/OpenSans-BoldItalic-webfont.ttf)format('truetype');font-weight:700;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-ExtraBold-webfont.eot);src:url(fonts/OpenSans-ExtraBold-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-ExtraBold-webfont.woff)format('woff'),url(fonts/OpenSans-ExtraBold-webfont.ttf)format('truetype');font-weight:800;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-ExtraBoldItalic-webfont.eot);src:url(fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix)format('embedded-opentype'),url(fonts/OpenSans-ExtraBoldItalic-webfont.woff)format('woff'),url(fonts/OpenSans-ExtraBoldItalic-webfont.ttf)format('truetype');font-weight:800;font-style:italic}
 @font-face{font-family:DroidSansMonoRegular;src:url(fonts/DroidSansMono-webfont.eot)format('embedded-opentype'),url(fonts/DroidSansMono-webfont.woff)format('woff'),url(fonts/DroidSansMono-webfont.ttf)format('truetype'),url(fonts/DroidSansMono-webfont.svg#DroidSansMonoRegular)format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:'Droid Sans Mono Regular';src:url(fonts/DroidSansMono-webfont.eot)format('embedded-opentype'),url(fonts/DroidSansMono-webfont.woff)format('woff'),url(fonts/DroidSansMono-webfont.ttf)format('truetype'),url(fonts/DroidSansMono-webfont.svg#DroidSansMonoRegular)format('svg');font-weight:400;font-style:normal}
 .list-row,.property-name{white-space:nowrap}
 *,.ngViewport:focus,a:focus{outline:0}
 .container-section,.profile-section{overflow-y:auto;overflow-x:hidden}
@@ -4575,8 +4586,8 @@ li.attr-column{width:1em}
 .table-bordered tbody:first-child tr:first-child td:first-child,.table-bordered thead:first-child tr:first-child th:first-child{border-radius:0;border-left:none}
 .table-bordered td,.table-bordered th{border-left:none;border-top:none}
 .table-bordered td:last-child,.table-bordered th:last-child{border-left:none;border-top:none;border-right:none}
-table.table thead .sorting_asc:after{background:url(../img/datatable/sort_asc.png)top center no-repeat}
-table.table thead .sorting_desc:after{background:url(../img/datatable/sort_desc.png)top center no-repeat}
+table.table thead .sorting_asc:after{background:url(img/datatable/sort_asc.png)top center no-repeat}
+table.table thead .sorting_desc:after{background:url(img/datatable/sort_desc.png)top center no-repeat}
 .dataTables_filter label input{padding-right:14px;padding-right:4px \9;padding-left:14px;padding-left:4px \9;margin-bottom:0}
 .logbar-container,.logbar-container .control-group,.ui-resizable-se{margin-bottom:5px}
 .navbar .btn-navbar span:after{font-family:FontAwesome;content:"\f0de";margin-left:7px}
@@ -5195,7 +5206,7 @@ a.dashboard-link{color:#000}
 .profile-selector-name.abstract{color:#888}
 .file-name{color:#333}
 i.expandable-indicator.folder{color:#EECA7C}
-.camel-canvas{border:1px solid #d4d4d4;box-shadow:inset 0 1px 13px rgba(0,0,0,.1);background-image:url(../../../img/img-noise-600x600.png)}
+.camel-canvas{border:1px solid #d4d4d4;box-shadow:inset 0 1px 13px rgba(0,0,0,.1);background-image:url(../../img/img-noise-600x600.png)}
 .tocify{border:1px solid #ccc;webkit-border-radius:6px;moz-border-radius:6px;border-radius:6px;background-color:#fff}
 .tocify li a:hover{background-color:#FAFAFA}
 .health-message-wrap,.tocify li a.active{border-top:1px solid #d4d4d4}
@@ -5473,10 +5484,10 @@ ul.dynatree-container ul{padding:0 0 0 16px;margin:0}
 ul.dynatree-container li{-moz-background-clip:border;-moz-background-inline-policy:continuous;-moz-background-origin:padding;background-attachment:scroll;background-color:transparent;background-position:0 0;background-repeat:repeat-y;background-image:none;margin:0;padding:1px 0 0;list-style:none}
 ul.dynatree-container li.dynatree-lastsib,ul.dynatree-no-connector>li{background-image:none}
 .ui-dynatree-disabled ul.dynatree-container{opacity:.5;background-color:silver}
-#dynatree-drop-marker,span.dynatree-checkbox,span.dynatree-connector,span.dynatree-drag-helper-img,span.dynatree-empty,span.dynatree-expander,span.dynatree-icon,span.dynatree-radio,span.dynatree-vline{width:16px;height:16px;display:inline-block;vertical-align:top;background-repeat:no-repeat;background-image:url(../img/dynatree/icons.gif);background-position:0 0}
+#dynatree-drop-marker,span.dynatree-checkbox,span.dynatree-connector,span.dynatree-drag-helper-img,span.dynatree-empty,span.dynatree-expander,span.dynatree-icon,span.dynatree-radio,span.dynatree-vline{width:16px;height:16px;display:inline-block;vertical-align:top;background-repeat:no-repeat;background-image:url(img/dynatree/icons.gif);background-position:0 0}
 ul.dynatree-container img{width:16px;height:16px;margin-left:3px;vertical-align:top;border-style:none}
 span.dynatree-connector{background-image:none}
-.dynatree-loading span.dynatree-expander,.dynatree-statusnode-wait span.dynatree-icon{background-image:url(../img/dynatree/loading.gif)}
+.dynatree-loading span.dynatree-expander,.dynatree-statusnode-wait span.dynatree-icon{background-image:url(img/dynatree/loading.gif)}
 span.dynatree-expander{background-position:0 -80px;cursor:pointer}
 span.dynatree-expander:hover{background-position:-16px -80px}
 .dynatree-exp-e span.dynatree-expander,.dynatree-exp-ed span.dynatree-expander,.dynatree-exp-edl span.dynatree-expander,.dynatree-exp-el span.dynatree-expander{background-position:-32px -80px}
@@ -5531,23 +5542,23 @@ span.dynatree-icon{position:relative;top:-2px;font-size:17px}
 span:not(.dynatree-has-children) .dynatree-icon:before{font-family:FontAwesome;content:"\f1b2"!important}
 [class*=" dynatree-folder icon-"]:before,[class^="dynatree-folder icon-"]:before{font-size:17px;margin-left:18px}
 [class*=" dynatree-folder icon-"] .dynatree-connector,[class*=" dynatree-folder icon-"] .dynatree-icon,[class^="dynatree-folder icon-"]{display:none}
-span.org-apache-camel span.dynatree-icon:before,span.org-apache-camel-context-folder span.dynatree-icon:before{display:inline-block;background:url(../img/icons/camel.svg)center no-repeat;min-width:16px;min-height:16px;background-size:18px 18px;content:""}
-span.org-apache-camel-context span.dynatree-icon:before{content:url(../img/icons/camel/camel_context_icon.png)}
-span.org-apache-camel-endpoints span.dynatree-icon:before{content:url(../img/icons/camel/endpoint_node.png)}
-span.org-apache-camel-endpoints-folder span.dynatree-icon:before{content:url(../img/icons/camel/endpoint_folder.png)}
-span.org-apache-camel-components-folder span.dynatree-icon:before{content:url(../img/icons/camel/component_folder.png)}
-span.org-apache-camel-routes span.dynatree-icon:before{content:url(../img/icons/camel/camel_route.png)}
-span.org-apache-camel-routes-folder span.dynatree-icon:before{content:url(../img/icons/camel/camel_route_folder.png)}
-ul.dynatree-container li ul li ul li span[class*="_context_"] span.dynatree-icon:before{content:url(../img/icons/camel/camel_context_icon.png)}
-i.org-apache-camel-endpoints-folder,span.org-apache-camel-endpoints-folder span.dynatree-icon:before{content:url(../img/icons/camel/endpoint_folder.png)}
-i.org-apache-camel-endpoints,span.org-apache-camel-endpoints span.dynatree-icon:before{content:url(../img/icons/camel/endpoint_node.png)}
+span.org-apache-camel span.dynatree-icon:before,span.org-apache-camel-context-folder span.dynatree-icon:before{display:inline-block;background:url(img/icons/camel.svg)center no-repeat;min-width:16px;min-height:16px;background-size:18px 18px;content:""!important}
+span.org-apache-camel-context span.dynatree-icon:before{content:url(img/icons/camel/camel_context_icon.png)}
+span.org-apache-camel-endpoints span.dynatree-icon:before{content:url(img/icons/camel/endpoint_node.png)}
+span.org-apache-camel-endpoints-folder span.dynatree-icon:before{content:url(img/icons/camel/endpoint_folder.png)}
+span.org-apache-camel-components-folder span.dynatree-icon:before{content:url(img/icons/camel/component_folder.png)}
+span.org-apache-camel-routes span.dynatree-icon:before{content:url(img/icons/camel/camel_route.png)}
+span.org-apache-camel-routes-folder span.dynatree-icon:before{content:url(img/icons/camel/camel_route_folder.png)}
+ul.dynatree-container li ul li ul li span[class*="_context_"] span.dynatree-icon:before{content:url(img/icons/camel/camel_context_icon.png)}
+i.org-apache-camel-endpoints-folder,span.org-apache-camel-endpoints-folder span.dynatree-icon:before{content:url(img/icons/camel/endpoint_folder.png)}
+i.org-apache-camel-endpoints,span.org-apache-camel-endpoints span.dynatree-icon:before{content:url(img/icons/camel/endpoint_node.png)}
 span[class*="_FileConsumer"] span.dynatree-icon:before{content:"\f0c5"}
-span.org-apache-activemq span.dynatree-icon:before,span.org-apache-activemq-Broker span.dynatree-icon:before,span[class*="_Broker"] span.dynatree-icon:before{display:inline-block;background:url(../img/icons/messagebroker.svg)center no-repeat;min-width:16px;min-height:16px;background-size:18px 18px;content:""}
-i.org-apache-activemq-Queue,span.org-apache-activemq-Queue span.dynatree-icon:before{content:url(../img/icons/activemq/queue.png)}
-i.org-apache-activemq-Queue-folder,span.org-apache-activemq-Queue-folder span.dynatree-icon:before{content:url(../img/icons/activemq/queue_folder.png)}
-i.org-apache-activemq-Topic,span.org-apache-activemq-Topic span.dynatree-icon:before{content:url(../img/icons/activemq/topic.png)}
-i.org-apache-activemq-Topic-folder,span.org-apache-activemq-Topic-folder span.dynatree-icon:before{content:url(../img/icons/activemq/topic_folder.png)}
-span.quartz-scheduler span.dynatree-icon:before{content:url(../img/icons/quartz/quarz.png)}
+span.org-apache-activemq span.dynatree-icon:before,span.org-apache-activemq-Broker span.dynatree-icon:before,span[class*="_Broker"] span.dynatree-icon:before{display:inline-block;background:url(img/icons/messagebroker.svg)center no-repeat;min-width:16px;min-height:16px;background-size:18px 18px;content:""!important}
+i.org-apache-activemq-Queue,span.org-apache-activemq-Queue span.dynatree-icon:before{content:url(img/icons/activemq/queue.png)}
+i.org-apache-activemq-Queue-folder,span.org-apache-activemq-Queue-folder span.dynatree-icon:before{content:url(img/icons/activemq/queue_folder.png)}
+i.org-apache-activemq-Topic,span.org-apache-activemq-Topic span.dynatree-icon:before{content:url(img/icons/activemq/topic.png)}
+i.org-apache-activemq-Topic-folder,span.org-apache-activemq-Topic-folder span.dynatree-icon:before{content:url(img/icons/activemq/topic_folder.png)}
+span.quartz-scheduler span.dynatree-icon:before{content:url(img/icons/quartz/quarz.png)}
 .metricsWatcher .heading1{font-size:24px;line-height:30px;margin:0}
 .metricsWatcher .heading3{font-size:18px;line-height:27px;margin:0}
 .metricsWatcher .heading4{font-size:14px;line-height:18px;margin:0}
