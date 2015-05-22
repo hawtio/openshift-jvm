@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     uri = require('URIjs'),
     s = require('underscore.string'),
     hawtio = require('hawtio-node-backend'),
+    urljoin = require('urljoin'),
     tslint = require('gulp-tslint'),
     tslintRules = require('./tslint.json');
 
@@ -207,23 +208,35 @@ gulp.task('watch', ['build', 'build-example'], function() {
   });
 });
 
-gulp.task('serve-site', function() {
+function configStaticAssets(prefix) {
   var staticAssets = [{
       path: '/',
-      dir: 'site/'
+      dir: prefix
   }];
-  var dirs = fs.readdirSync('site/libs');
-  dirs.forEach(function(dir) {
-    dir = 'site/libs/' + dir;
-    console.log("dir: ", dir);
-    if (fs.statSync(dir).isDirectory()) {
-      console.log("Adding directory to search path: ", dir);
-      staticAssets.push({
-        path: '/',
-        dir: dir
+  var targetDir = urljoin(prefix, 'libs');
+  try {
+    if (fs.statSync(targetDir).isDirectory()) {
+      var dirs = fs.readdirSync(targetDir);
+      dirs.forEach(function(dir) {
+        dir = urljoin(prefix, 'libs', dir);
+        console.log("dir: ", dir);
+        if (fs.statSync(dir).isDirectory()) {
+          console.log("Adding directory to search path: ", dir);
+          staticAssets.push({
+            path: '/',
+            dir: dir
+          });
+        }
       });
     }
-  });
+  } catch (err) {
+    console.log("Nothing in libs to worry about");
+  }
+  return staticAssets;
+}
+
+gulp.task('serve-site', function() {
+  var staticAssets = configStaticAssets('site');
   hawtio.setConfig({
     port: 2772,
     staticProxies: [
@@ -239,7 +252,7 @@ gulp.task('serve-site', function() {
       enabled: false
     }
   });
-  hawtio.listen(function(server) {
+  return hawtio.listen(function(server) {
     var host = server.address().address;
     var port = server.address().port;
     console.log("started from gulp file at ", host, ":", port);
@@ -252,24 +265,7 @@ gulp.task('connect', ['watch'], function() {
   var kube = uri(process.env.KUBERNETES_MASTER || 'http://localhost:8080');
   console.log("Connecting to Kubernetes on: " + kube);
   */
-  var staticAssets = [{
-      path: '/',
-      dir: '.'
-  }];
-
-  var dirs = fs.readdirSync('./libs');
-  dirs.forEach(function(dir) {
-    var dir = './libs/' + dir;
-    console.log("dir: ", dir);
-    if (fs.statSync(dir).isDirectory()) {
-      console.log("Adding directory to search path: ", dir);
-      staticAssets.push({
-        path: '/',
-        dir: dir
-      });
-    }
-  });
-
+  var staticAssets = configStaticAssets('.');
   hawtio.setConfig({
     port: 2772,
     staticProxies: [
@@ -278,24 +274,6 @@ gulp.task('connect', ['watch'], function() {
       path: '/jolokia',
       targetPath: '/hawtio/jolokia'
     }
-    /*
-    // proxy to a service, in this case kubernetes
-    {
-      proto: kube.protocol(),
-      port: kube.port(),
-      hostname: kube.hostname(),
-      path: '/services/kubernetes',
-      targetPath: kube.path()
-    },
-    // proxy to a jolokia instance
-    {
-      proto: kube.protocol(),
-      hostname: kube.hostname(),
-      port: kube.port(),
-      path: '/jolokia',
-      targetPath: '/hawtio/jolokia'
-    }
-    */
     ],
     staticAssets: staticAssets,
     fallback: 'index.html',
@@ -303,23 +281,7 @@ gulp.task('connect', ['watch'], function() {
       enabled: true
     }
   });
-  /*
-   * Example middleware that returns a 404 for templates
-   * as they're already embedded in the js
-  hawtio.use('/', function(req, res, next) {
-          var path = req.originalUrl;
-          // avoid returning these files, they should get pulled from js
-          if (s.startsWith(path, '/plugins/') && s.endsWith(path, 'html')) {
-            console.log("returning 404 for: ", path);
-            res.statusCode = 404;
-            res.end();
-          } else {
-            console.log("allowing: ", path);
-            next();
-          }
-        });
-        */
-  hawtio.listen(function(server) {
+  return hawtio.listen(function(server) {
     var host = server.address().address;
     var port = server.address().port;
     console.log("started from gulp file at ", host, ":", port);
@@ -350,9 +312,16 @@ gulp.task('tweak-droid-sans-mono', ['site-fonts'], function() {
     .pipe(gulp.dest('site/fonts/'));
 });
 
-gulp.task('site-files', ['tweak-open-sans', 'tweak-droid-sans-mono'], function() {
-  return gulp.src(['images/**', 'img/**', 'libs/**/*.swf'], {base: '.'})
-    .pipe(plugins.debug({title: 'site files'}))
+gulp.task('root-files', function() {
+  return gulp.src(['favicon.ico', 'libs/**/*.swf'], { base: '.' })
+    .pipe(plugins.flatten())
+    .pipe(plugins.debug({title: 'flattened site files'}))
+    .pipe(gulp.dest('site'));
+})
+
+gulp.task('site-files', ['root-files', 'tweak-open-sans', 'tweak-droid-sans-mono'], function() {
+  return gulp.src(['images/**', 'img/**'], {base: '.'})
+    .pipe(plugins.debug({title: 'site images'}))
     .pipe(gulp.dest('site'));
 });
 
@@ -368,7 +337,16 @@ gulp.task('usemin', ['site-files'], function() {
     .pipe(gulp.dest('site'));
 });
 
-gulp.task('site', ['usemin'], function() {
+gulp.task('tweak-urls', ['usemin'], function() {
+  return gulp.src('site/style.css')
+    .pipe(plugins.replace(/url\(\.\.\//g, 'url('))
+    .pipe(plugins.replace(/url\(libs\/bootstrap\/dist\//g, 'url('))
+    .pipe(plugins.replace(/url\(libs\/patternfly\/components\/bootstrap\/dist\//g, 'url('))
+    .pipe(plugins.debug({title: 'tweak-urls'}))
+    .pipe(gulp.dest('site'));
+});
+
+gulp.task('site', ['tweak-urls'], function() {
 
   gulp.src('site/index.html')
     .pipe(plugins.rename('404.html'))
