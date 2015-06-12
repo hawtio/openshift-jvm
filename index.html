@@ -115,17 +115,11 @@
 
     <style>
       body {
-        padding-top: 120px;
+        padding-top: 160px;
       }
       .pane {
-        top: 120px;
+        top: 155px;
       }
-      .navbar-brand > img {
-        height: 20px;
-        margin-top: -5px;
-        margin-bottom: -5px;
-      }
-
       .navbar-fixed-top [hawtio-sub-tabs] {
         float: none;
         display: block;
@@ -227,27 +221,24 @@
         position: relative;
         margin: -1px 0 0;
       }
-
+      .navbar-pf .navbar-brand {
+        padding-bottom: 9px;
+      }
       .navbar-brand img {
-        display: inline-block !important;
-        margin-top: -10px;
+        height: 7px;
       }
-
-      .navbar-brand h4 {
-        display: inline-block !important;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 2em;
-        margin-right: 1em;
+      .container-header {
+        margin-left: 17px;
+        color: #fff;
+        margin-bottom: 4px;
       }
-
-      .navbar-utility, 
-      .navbar-utility li, 
-      .navbar-utility li a {
-        height: 34px;
+      .container-header h4 {
+        margin-top: 4px;
+        margin-bottom: 3px;
       }
-      .navbar-utility li a {
-        padding-top: 10px !important;
+      .container-header a {
+        font-weight: bold;
+        margin-bottom: 4px;
       }
     </style>
 
@@ -257,26 +248,14 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-pf" role="navigation" ng-cloak>
       <div class="navbar-header">
         <span class="navbar-brand">
-          <img src="img/hawtio_logo.svg">
-          <h4 ng-bind="containerName"></h4>
-          <span ng-show="goBack"><a href="" ng-click="goBack()">Back</a></span>
+          <img src="img/logo-origin-thin.svg">
         </span>
-        <!--
-        <a class="navbar-brand"><img src="img/hawtio_logo.svg"></a>
-        -->
       </div>
-      <ul class="nav navbar-nav navbar-utility" hawtio-extension name="hawtio-user">
-        <!--
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="pficon pficon-user"></span>
-            User <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu" hawtio-extension name="hawtio-user">
-          </ul>
-        </li>
-        -->
-      </ul>
+      <ul class="nav navbar-nav navbar-utility" hawtio-extension name="hawtio-user"></ul>
+      <div class="container-header">
+        <h4>Connected to <span ng-bind="containerName"></span></h4>
+        <a ng-show="goBack" href="" ng-click="goBack()"><i class="fa fa-arrow-left"></i> Back</a>
+      </div>
       <ul class="nav navbar-nav navbar-primary" hawtio-main-nav></ul>
       <ul class="nav navbar-nav navbar-persistent" hawtio-sub-tabs></ul>
     </nav>
