@@ -156,15 +156,6 @@ gulp.task('tslint-watch', function(){
     }));
 });
 
-gulp.task('less', function () {
-  return gulp.src(config.less)
-    .pipe(plugins.less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(plugins.concat(config.css))
-    .pipe(gulp.dest('./dist'));
-});
-
 gulp.task('template', ['tsc'], function() {
   return gulp.src(config.templates)
     .pipe(plugins.angularTemplatecache({
@@ -202,9 +193,6 @@ gulp.task('watch', ['build', 'build-example'], function() {
   });
   plugins.watch([config.testTs, config.testTemplates], function() {
     gulp.start(['example-tsc', 'example-template', 'example-concat', 'example-clean']);
-  });
-  plugins.watch(config.less, function(){
-    gulp.start('less', 'reload');
   });
 });
 
@@ -385,7 +373,7 @@ gulp.task('deploy', function() {
 });
 
 
-gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'less', 'template', 'concat', 'clean']);
+gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'template', 'concat', 'clean']);
 
 gulp.task('build-example', ['example-tsc', 'example-template', 'example-concat', 'example-clean']);
 
