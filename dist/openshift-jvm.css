@@ -1,9 +1,9 @@
 
 body {
-  padding-top: 140px;
+  padding-top: 160px;
 }
 .pane {
-  top: 140px;
+  top: 155px;
 }
 .navbar-fixed-top [hawtio-sub-tabs] {
   float: none;
