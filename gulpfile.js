@@ -319,7 +319,7 @@ gulp.task('usemin', ['site-files'], function() {
       css: [plugins.minifyCss({
         keepBreaks: true                       
       }), 'concat'],
-      js: [plugins.uglify(), plugins.rev()]
+      js: [plugins.uglify()]
     }))
     .pipe(plugins.debug({title: 'usemin'}))
     .pipe(gulp.dest('site'));
@@ -367,7 +367,7 @@ gulp.task('deploy', function() {
     .pipe(plugins.debug({title: 'deploy'}))
     .pipe(plugins.ghPages({
       branch: 'builds',
-      push: false,
+      push: true,
       message: "[ci skip] Update site"                     
     }));
 });
