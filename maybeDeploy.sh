@@ -11,13 +11,14 @@ echo "Latest in repo: $CURRENT"
 if [ "$CURRENT" != "$LATEST" ]
 then
   echo "Deploying new build"
-  rm -Rf .publish && \
   git config --global user.email "circleci@mail.com" && \
   git config --global user.name "circleci" && \
   rm -Rf site/* && \
   gulp site && \
   gulp deploy && \
   pushd .publish && \
+  git log &&  \
+  git status && \
   git tag ${CURRENT}-build && \
   git push && git push --tags && \
   popd && \
