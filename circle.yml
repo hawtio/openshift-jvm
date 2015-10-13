@@ -12,6 +12,7 @@ dependencies:
     - npm install -g bower gulp
     - npm update
     - bower update
+    - git config --global push.default matching
   override:
 
 test:
