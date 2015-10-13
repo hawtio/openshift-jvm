@@ -17,8 +17,6 @@ then
   gulp site && \
   gulp deploy && \
   pushd .publish && \
-  git log &&  \
-  git status && \
   git tag ${CURRENT}-build && \
   git push && git push --tags && \
   popd && \
