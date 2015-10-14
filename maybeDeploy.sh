@@ -1,5 +1,6 @@
 #!/bin/bash
 
+git config --global push.default matching
 git fetch --tags
 
 LATEST=`cat LATEST`
@@ -14,19 +15,13 @@ then
   git config --global user.email "circleci@mail.com" && \
   git config --global user.name "circleci" && \
   rm -Rf site/* && \
-  echo "Cleanin and rebuilding" && \
+  echo "Cleaning and rebuilding" && \
   gulp site && \
   gulp deploy && \
-  pushd .publish && \
-  echo "Status of build branch: " && \
-  git status && \ 
-  git tag ${CURRENT}-build && \
-  git push && git push --tags && \
-  popd && \
-  echo $CURRENT > LATEST && \
-  git add LATEST && \
-  git commit -m "Updating latest tag" && \
-  git push && git push --tags
+  echo echo $CURRENT > LATEST && \
+  echo git add LATEST && \
+  echo git commit -m "Updating latest tag" && \
+  echo git push && git push --tags
 else
   echo "Not deploying new build"
 fi

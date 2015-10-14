@@ -11,10 +11,12 @@ var gulp = require('gulp'),
     hawtio = require('hawtio-node-backend'),
     urljoin = require('urljoin'),
     tslint = require('gulp-tslint'),
+    ghPages = require('gh-pages'),
     tslintRules = require('./tslint.json');
 
 var plugins = gulpLoadPlugins({});
 var pkg = require('./package.json');
+var bower = require('./bower.json');
 
 var config = {
   main: '.',
@@ -281,6 +283,7 @@ gulp.task('reload', function() {
     .pipe(hawtio.reload());
 });
 
+// 'site' tasks
 gulp.task('site-fonts', function() {
   return gulp.src(['libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf'], { base: '.' })
     .pipe(plugins.flatten())
@@ -354,13 +357,13 @@ gulp.task('tweak-urls', ['usemin'], function() {
     .pipe(gulp.dest('site'));
 });
 
-gulp.task('404', ['site-files'], function() {
+gulp.task('404', ['usemin', 'site-files'], function() {
   return gulp.src('site/index.html')
     .pipe(plugins.rename('404.html'))
     .pipe(gulp.dest('site'));
 });
 
-gulp.task('site', ['404', 'tweak-urls'], function() {
+gulp.task('copy-images', ['404', 'tweak-urls'], function() {
   var dirs = fs.readdirSync('./libs');
   var patterns = [];
   dirs.forEach(function(dir) {
@@ -381,16 +384,22 @@ gulp.task('site', ['404', 'tweak-urls'], function() {
            .pipe(gulp.dest('site/img'));
 });
 
-gulp.task('deploy', function() {
-  return gulp.src(['site/**', 'site/**/*.*', 'site/*.*'], { base: 'site' })
-    .pipe(plugins.debug({title: 'deploy'}))
-    .pipe(plugins.ghPages({
+gulp.task('deploy', function(cb) {
+  ghPages.publish(
+    path.join(__dirname, 'site'), 
+    {
+      clone: '.publish',
       branch: 'builds',
+      tag: 'v' + bower.version + '-build',
+      message: "[ci skip] Update site",
       push: true,
-      message: "[ci skip] Update site"                     
-    }));
+      logger: function(message) {
+        console.log(message);
+      }
+    }, cb);
 });
 
+gulp.task('site', ['site-fonts', 'tweak-open-sans', 'tweak-droid-sans-mono', 'swf', 'root-files', 'site-files', 'usemin', 'tweak-urls', '404', 'copy-images']);
 
 gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'template', 'concat', 'clean']);
 
