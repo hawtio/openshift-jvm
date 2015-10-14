@@ -18,10 +18,10 @@ then
   echo "Cleaning and rebuilding" && \
   gulp site && \
   gulp deploy && \
-  echo echo $CURRENT > LATEST && \
-  echo git add LATEST && \
-  echo git commit -m "Updating latest tag" && \
-  echo git push && git push --tags
+  echo $CURRENT > LATEST && \
+  git add LATEST && \
+  git commit -m "Updating latest tag" && \
+  git push && git push --tags
 else
   echo "Not deploying new build"
 fi
