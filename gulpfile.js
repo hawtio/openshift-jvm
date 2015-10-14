@@ -293,24 +293,6 @@ gulp.task('site-fonts', function() {
     .pipe(gulp.dest('site/fonts/', { overwrite: false }));
 });
 
-gulp.task('tweak-open-sans', ['site-fonts'], function() {
-  return gulp.src('site/libs/**/OpenSans*')
-    .pipe(plugins.flatten())
-    .pipe(plugins.chmod(644))
-    .pipe(plugins.dedupe({ same: false }))
-    .pipe(plugins.debug({title: 'opensans files'}))
-    .pipe(gulp.dest('site/fonts/', { overwrite: false }));
-});
-
-gulp.task('tweak-droid-sans-mono', ['site-fonts'], function() {
-  return gulp.src('site/libs/DroidSansMono*')
-    .pipe(plugins.flatten())
-    .pipe(plugins.chmod(644))
-    .pipe(plugins.dedupe({ same: false }))
-    .pipe(plugins.debug({title: 'droid sans mono files'}))
-    .pipe(gulp.dest('site/fonts/', { overwrite: false }));
-});
-
 gulp.task('swf', function() {
   return gulp.src(['libs/**/*.swf'], { base: '.' })
     .pipe(plugins.flatten())
@@ -328,7 +310,7 @@ gulp.task('root-files', ['swf'], function() {
     .pipe(gulp.dest('site'));
 })
 
-gulp.task('site-files', ['root-files', 'tweak-open-sans', 'tweak-droid-sans-mono'], function() {
+gulp.task('site-files', ['root-files', 'site-fonts'], function() {
   return gulp.src(['images/**', 'img/**'], {base: '.'})
     .pipe(plugins.chmod(644))
     .pipe(plugins.dedupe({ same: false }))
@@ -399,7 +381,7 @@ gulp.task('deploy', function(cb) {
     }, cb);
 });
 
-gulp.task('site', ['site-fonts', 'tweak-open-sans', 'tweak-droid-sans-mono', 'swf', 'root-files', 'site-files', 'usemin', 'tweak-urls', '404', 'copy-images']);
+gulp.task('site', ['site-fonts', 'swf', 'root-files', 'site-files', 'usemin', 'tweak-urls', '404', 'copy-images']);
 
 gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'template', 'concat', 'clean']);
 
