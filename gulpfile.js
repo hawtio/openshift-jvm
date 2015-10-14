@@ -284,31 +284,51 @@ gulp.task('reload', function() {
 gulp.task('site-fonts', function() {
   return gulp.src(['libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf'], { base: '.' })
     .pipe(plugins.flatten())
+    .pipe(plugins.chmod(644))
+    .pipe(plugins.dedupe({ same: false }))
     .pipe(plugins.debug({title: 'site font files'}))
-    .pipe(gulp.dest('site/fonts/'));
+    .pipe(gulp.dest('site/fonts/', { overwrite: false }));
 });
 
 gulp.task('tweak-open-sans', ['site-fonts'], function() {
   return gulp.src('site/libs/**/OpenSans*')
     .pipe(plugins.flatten())
-    .pipe(gulp.dest('site/fonts/'));
+    .pipe(plugins.chmod(644))
+    .pipe(plugins.dedupe({ same: false }))
+    .pipe(plugins.debug({title: 'opensans files'}))
+    .pipe(gulp.dest('site/fonts/', { overwrite: false }));
 });
 
 gulp.task('tweak-droid-sans-mono', ['site-fonts'], function() {
   return gulp.src('site/libs/DroidSansMono*')
     .pipe(plugins.flatten())
-    .pipe(gulp.dest('site/fonts/'));
+    .pipe(plugins.chmod(644))
+    .pipe(plugins.dedupe({ same: false }))
+    .pipe(plugins.debug({title: 'droid sans mono files'}))
+    .pipe(gulp.dest('site/fonts/', { overwrite: false }));
 });
 
-gulp.task('root-files', function() {
-  return gulp.src(['favicon.ico', 'libs/**/*.swf'], { base: '.' })
+gulp.task('swf', function() {
+  return gulp.src(['libs/**/*.swf'], { base: '.' })
     .pipe(plugins.flatten())
-    .pipe(plugins.debug({title: 'flattened site files'}))
+    .pipe(plugins.chmod(644))
+    .pipe(plugins.dedupe({ same: false }))
+    .pipe(plugins.debug({title: 'swf files'}))
+    .pipe(gulp.dest('site/img/', { overwrite: false }));
+});
+
+gulp.task('root-files', ['swf'], function() {
+  return gulp.src(['favicon.ico'], { base: '.' })
+    .pipe(plugins.flatten())
+    .pipe(plugins.debug({title: 'root files'}))
+    .pipe(plugins.chmod(644))
     .pipe(gulp.dest('site'));
 })
 
 gulp.task('site-files', ['root-files', 'tweak-open-sans', 'tweak-droid-sans-mono'], function() {
   return gulp.src(['images/**', 'img/**'], {base: '.'})
+    .pipe(plugins.chmod(644))
+    .pipe(plugins.dedupe({ same: false }))
     .pipe(plugins.debug({title: 'site images'}))
     .pipe(gulp.dest('site'));
 });
@@ -334,17 +354,13 @@ gulp.task('tweak-urls', ['usemin'], function() {
     .pipe(gulp.dest('site'));
 });
 
-gulp.task('site', ['tweak-urls'], function() {
-
-  gulp.src('site/index.html')
+gulp.task('404', ['site-files'], function() {
+  return gulp.src('site/index.html')
     .pipe(plugins.rename('404.html'))
     .pipe(gulp.dest('site'));
+});
 
-    /*
-  gulp.src([], {base: '.'})
-    .pipe(gulp.dest('site/fonts'));
-    */
-
+gulp.task('site', ['404', 'tweak-urls'], function() {
   var dirs = fs.readdirSync('./libs');
   var patterns = [];
   dirs.forEach(function(dir) {
@@ -359,7 +375,10 @@ gulp.task('site', ['tweak-urls'], function() {
       // ignore, file does not exist
     }
   });
-  return gulp.src(patterns).pipe(plugins.debug({ title: 'img-copy' })).pipe(gulp.dest('site/img'));
+  return gulp.src(patterns)
+           .pipe(plugins.debug({ title: 'img-copy' }))
+           .pipe(plugins.chmod(644))
+           .pipe(gulp.dest('site/img'));
 });
 
 gulp.task('deploy', function() {
