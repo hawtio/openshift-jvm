@@ -14,9 +14,12 @@ then
   git config --global user.email "circleci@mail.com" && \
   git config --global user.name "circleci" && \
   rm -Rf site/* && \
+  echo "Cleanin and rebuilding" && \
   gulp site && \
   gulp deploy && \
   pushd .publish && \
+  echo "Status of build branch: " && \
+  git status && \ 
   git tag ${CURRENT}-build && \
   git push && git push --tags && \
   popd && \
