@@ -341,7 +341,22 @@ gulp.task('usemin', ['site-files'], function() {
       css: [plugins.minifyCss({
         keepBreaks: true                       
       }), 'concat'],
-      js: [plugins.uglify()]
+      js: [
+        plugins.sourcemaps.init({
+          loadMaps: true
+        }), 
+        plugins.uglify(), 
+        plugins.rev(),
+        plugins.sourcemaps.write('./')
+      ],
+      js1: [
+        plugins.sourcemaps.init({
+          loadMaps: true
+        }), 
+        plugins.uglify(), 
+        plugins.rev(),
+        plugins.sourcemaps.write('./')
+      ]
     }))
     .pipe(plugins.debug({title: 'usemin'}))
     .pipe(gulp.dest('site'));

@@ -12,6 +12,7 @@ dependencies:
     - npm install -g bower gulp
     - npm update
     - bower update
+    - rm -Rf site/*
   override:
 
 test:
