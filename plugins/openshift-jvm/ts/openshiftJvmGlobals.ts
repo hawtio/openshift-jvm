@@ -15,10 +15,8 @@
 
 /// <reference path="../../includes.ts"/>
 module OpenshiftJvm {
-
   export var pluginName = "openshift-jvm";
-
   export var log: Logging.Logger = Logger.get(pluginName);
-
   export var templatePath = "plugins/openshift-jvm/html";
+  export var version:any = {};
 }

@@ -19,13 +19,7 @@ module OpenshiftJvm {
 
   export var _module = angular.module(pluginName, []);
 
-  /*
-  _module.config(["$locationProvider", "$routeProvider", "HawtioNavBuilderProvider",
-    ($locationProvider, $routeProvider: ng.route.IRouteProvider, builder: HawtioMainNav.BuilderFactory) => {
-  }]);
-  */
-
-  _module.run(["HawtioNav", (nav:HawtioMainNav.Registry) => {
+  _module.run(["HawtioNav", "preferencesRegistry", (nav:HawtioMainNav.Registry, prefs) => {
     nav.on(HawtioMainNav.Actions.CHANGED, pluginName, (items) => {
       items.forEach((item) => {
         switch(item.id) {
@@ -35,8 +29,36 @@ module OpenshiftJvm {
         }
       });
     });
-    log.debug("loaded");
+    prefs.addTab('About ' + version.name, UrlHelpers.join(templatePath, 'about.html'));
+    log.info("started, version: ", version.version);
+    log.info("commit ID: ", version.commitId);
   }]);
+
+  _module.controller('Main.About', ($scope) => {
+    $scope.info = version;
+  });
+
+  hawtioPluginLoader.registerPreBootstrapTask((next) => {
+    $.ajax({
+      url: 'version.json', 
+      success: (data) => {
+        try {
+          version = angular.fromJson(data);
+        } catch (err) {
+          version = {
+            name: 'openshift-jvm',
+            version: ''
+          };
+        }
+        next();
+      },
+      error: (jqXHR, text, status) => {
+        log.debug("Failed to fetch version: jqXHR: ", jqXHR, " text: ", text, " status: ", status);
+        next();
+      },
+      dataType: "html"
+    });
+  });
 
 
   hawtioPluginLoader.addModule(pluginName);

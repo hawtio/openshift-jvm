@@ -17,6 +17,18 @@ var gulp = require('gulp'),
 var plugins = gulpLoadPlugins({});
 var pkg = require('./package.json');
 var bower = require('./bower.json');
+var bower = require('./bower.json');
+bower.packages = {};
+
+function getVersionString() {
+  return JSON.stringify({
+    name: bower.name,
+    version: bower.version,
+    commitId: bower.commitId,
+    packages: bower.packages
+  }, undefined, 2);
+}
+
 
 var config = {
   main: '.',
@@ -249,7 +261,7 @@ gulp.task('serve-site', function() {
   });
 });
 
-gulp.task('connect', ['watch'], function() {
+gulp.task('connect', ['watch', 'collect-dep-versions'], function() {
   /*
    * Example of fetching a URL from the environment, in this case for kubernetes
   var kube = uri(process.env.KUBERNETES_MASTER || 'http://localhost:8080');
@@ -270,6 +282,11 @@ gulp.task('connect', ['watch'], function() {
     liveReload: {
       enabled: true
     }
+  });
+  hawtio.use('/version.json', function(req, res, next) {
+    var answer = getVersionString();
+    res.set('Content-Type', 'application/javascript');
+    res.send(answer);
   });
   return hawtio.listen(function(server) {
     var host = server.address().address;
@@ -366,6 +383,28 @@ gulp.task('copy-images', ['404', 'tweak-urls'], function() {
            .pipe(gulp.dest('site/img'));
 });
 
+gulp.task('collect-dep-versions', ['get-commit-id'], function() {
+  return gulp.src('libs/**/.bower.json')
+    .pipe(map(function(buf, filename) {
+      var pkg = JSON.parse(buf.toString());
+      bower.packages[pkg.name] = {
+        version: pkg.version
+      };
+    }));
+});
+
+gulp.task('get-commit-id', function(cb) {
+  plugins.git.exec({ args: 'rev-parse HEAD'}, function(err, stdout) {
+    bower.commitId = stdout.trim();
+    cb();
+  });
+});
+
+gulp.task('write-version-json', ['collect-dep-versions'], function(cb) {
+  fs.writeFile('site/version.json', getVersionString(), cb);
+});
+
+
 gulp.task('deploy', function(cb) {
   ghPages.publish(
     path.join(__dirname, 'site'), 
@@ -381,7 +420,7 @@ gulp.task('deploy', function(cb) {
     }, cb);
 });
 
-gulp.task('site', ['site-fonts', 'swf', 'root-files', 'site-files', 'usemin', 'tweak-urls', '404', 'copy-images']);
+gulp.task('site', ['site-fonts', 'swf', 'root-files', 'site-files', 'usemin', 'tweak-urls', '404', 'copy-images', 'write-version-json']);
 
 gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'template', 'concat', 'clean']);
 
