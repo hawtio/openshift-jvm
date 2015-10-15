@@ -14,8 +14,10 @@ then
   echo "Deploying new build"
   git config --global user.email "circleci@mail.com" && \
   git config --global user.name "circleci" && \
-  rm -Rf site/* && \
   echo "Cleaning and rebuilding" && \
+  rm -Rf site/* && \
+  gulp bower path-adjust && \
+  gulp build && \
   gulp site && \
   gulp deploy && \
   echo $CURRENT > LATEST && \
