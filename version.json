@@ -1,0 +1,89 @@
+{
+  "name": "openshift-jvm",
+  "version": "1.0.34",
+  "commitId": "d4e123a1c01fbc70681a8bf8fe9fbc5fde516917",
+  "packages": {
+    "angular": {
+      "version": "1.3.20"
+    },
+    "angular-resource": {
+      "version": "1.3.20"
+    },
+    "angular-route": {
+      "version": "1.3.20"
+    },
+    "angular-sanitize": {
+      "version": "1.3.20"
+    },
+    "bootstrap": {
+      "version": "3.3.5"
+    },
+    "codemirror": {
+      "version": "5.7.0"
+    },
+    "dagre": {
+      "version": "0.7.4"
+    },
+    "es5-dom-shim": {},
+    "graphlib": {
+      "version": "1.0.7"
+    },
+    "hawtio-core": {
+      "version": "2.0.19"
+    },
+    "hawtio-core-dts": {
+      "version": "2.0.21"
+    },
+    "hawtio-core-navigation": {
+      "version": "2.0.52"
+    },
+    "hawtio-extension-service": {
+      "version": "2.0.2"
+    },
+    "hawtio-forms": {
+      "version": "2.0.17"
+    },
+    "hawtio-integration": {
+      "version": "2.0.7"
+    },
+    "hawtio-jmx": {
+      "version": "2.0.56"
+    },
+    "hawtio-preferences": {
+      "version": "2.0.4"
+    },
+    "hawtio-template-cache": {
+      "version": "2.0.4"
+    },
+    "hawtio-ui": {
+      "version": "2.0.58"
+    },
+    "hawtio-utilities": {
+      "version": "2.0.25"
+    },
+    "jquery": {
+      "version": "2.1.4"
+    },
+    "js-logger": {
+      "version": "0.9.14"
+    },
+    "lodash": {
+      "version": "3.2.0"
+    },
+    "PatternFly": {
+      "version": "1.1.4"
+    },
+    "toastr": {
+      "version": "2.1.2"
+    },
+    "URIjs": {
+      "version": "1.14.2"
+    },
+    "urijs": {
+      "version": "1.16.1"
+    },
+    "zeroclipboard": {
+      "version": "2.2.0"
+    }
+  }
+}
