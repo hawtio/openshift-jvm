@@ -121,6 +121,7 @@ gulp.task('example-template', ['example-tsc'], function() {
 gulp.task('example-concat', ['example-template'], function() {
   return gulp.src(['test-compiled.js', 'test-templates.js'])
     .pipe(plugins.concat(config.testJs))
+    .pipe(plugins.ngAnnotate())
     .pipe(gulp.dest(config.dist));
 });
 
@@ -187,9 +188,7 @@ gulp.task('concat', ['template'], function() {
   var license = tslintRules.rules['license-header'][1];
   return gulp.src(['compiled.js', 'templates.js'])
     .pipe(plugins.concat(config.js))
-    .pipe(plugins.header(license))
-    .pipe(size(normalSizeOptions))
-    .pipe(gZipSize)
+    .pipe(plugins.ngAnnotate())
     .pipe(gulp.dest(config.dist));
 });
 
