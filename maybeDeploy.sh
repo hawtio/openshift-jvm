@@ -22,7 +22,7 @@ then
   gulp deploy && \
   echo $CURRENT > LATEST && \
   git add LATEST && \
-  git commit -m "Updating latest tag" && \
+  git commit -m "[ci skip] Updating latest tag" && \
   git push && git push --tags
 else
   echo "Not deploying new build"
