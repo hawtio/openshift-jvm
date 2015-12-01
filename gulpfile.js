@@ -34,7 +34,7 @@ var config = {
   main: '.',
   ts: ['plugins/**/*.ts'],
   testTs: ['test-plugins/**/*.ts'],
-  less: './less/**/*.less',
+  less: ['plugins/**/*.less'],
   templates: ['plugins/**/*.html'],
   testTemplates: ['test-plugins/**/*.html'],
   templateModule: pkg.name + '-templates',
@@ -97,7 +97,7 @@ gulp.task('example-tsc', ['tsc'], function() {
   var tsResult = gulp.src(config.testTs)
     .pipe(plugins.typescript(config.testTsProject))
     .on('error', plugins.notify.onError({
-      message: '#{ error.message }',
+      message: '%<= error.message =>',
       title: 'Typescript compilation error - test'
     }));
 
@@ -136,7 +136,7 @@ gulp.task('tsc', ['clean-defs'], function() {
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.typescript(config.tsProject))
     .on('error', plugins.notify.onError({
-      message: '#{ error.message }',
+      message: '%<= error.message %>',
       title: 'Typescript compilation error'
     }));
 
@@ -171,6 +171,19 @@ gulp.task('tslint-watch', function(){
     }));
 });
 
+gulp.task('less', function () {
+  return gulp.src(config.less)
+    .pipe(plugins.less({
+      paths: [ path.join(__dirname, 'less', 'includes') ]
+    }))
+    .on('error', plugins.notify.onError({
+      message: '<%= error.message %>',
+      title: 'less file compilation error'
+    }))
+    .pipe(plugins.concat(config.css))
+    .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('template', ['tsc'], function() {
   return gulp.src(config.templates)
     .pipe(plugins.angularTemplatecache({
@@ -197,7 +210,13 @@ gulp.task('clean', ['concat'], function() {
     .pipe(plugins.clean());
 });
 
-gulp.task('watch', ['build', 'build-example'], function() {
+gulp.task('watch-less', function() {
+  plugins.watch(config.less, function() {
+    gulp.start('less');
+  });
+});
+
+gulp.task('watch', ['build', 'build-example', 'watch-less'], function() {
   plugins.watch(['libs/**/*.js', 'libs/**/*.css', 'index.html', urljoin(config.dist, config.js), urljoin(config.dist, config.css)], function() {
     gulp.start('reload');
   });
@@ -436,7 +455,7 @@ gulp.task('deploy', function(cb) {
 
 gulp.task('site', ['site-fonts', 'swf', 'root-files', 'site-files', 'usemin', 'tweak-urls', '404', 'copy-images', 'write-version-json']);
 
-gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'template', 'concat', 'clean']);
+gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'less', 'template', 'concat', 'clean']);
 
 gulp.task('build-example', ['example-tsc', 'example-template', 'example-concat', 'example-clean']);
 
