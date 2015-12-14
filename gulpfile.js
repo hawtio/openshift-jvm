@@ -2,21 +2,20 @@ var gulp = require('gulp'),
     wiredep = require('wiredep').stream,
     eventStream = require('event-stream'),
     gulpLoadPlugins = require('gulp-load-plugins'),
-    map = require('vinyl-map'),
     fs = require('fs'),
     path = require('path'),
     size = require('gulp-size'),
-    uri = require('URIjs'),
+    uri = require('urijs'),
     s = require('underscore.string'),
     hawtio = require('hawtio-node-backend'),
     urljoin = require('urljoin'),
     tslint = require('gulp-tslint'),
     ghPages = require('gh-pages'),
-    tslintRules = require('./tslint.json');
+    tslintRules = require('./tslint.json'),
+    del = require('del');
 
 var plugins = gulpLoadPlugins({});
 var pkg = require('./package.json');
-var bower = require('./bower.json');
 var bower = require('./bower.json');
 bower.packages = {};
 
@@ -79,18 +78,12 @@ gulp.task('bower', function() {
 /** Adjust the reference path of any typescript-built plugin this project depends on */
 gulp.task('path-adjust', function() {
   gulp.src('libs/**/includes.d.ts')
-    .pipe(map(function(buf, filename) {
-      var textContent = buf.toString();
-      var newTextContent = textContent.replace(/"\.\.\/libs/gm, '"../../../libs');
-      // console.log("Filename: ", filename, " old: ", textContent, " new:", newTextContent);
-      return newTextContent;
-    }))
+    .pipe(plugins.replace(/"\.\.\/libs/gm, '"../../../libs'))
     .pipe(gulp.dest('libs'));
 });
 
 gulp.task('clean-defs', function() {
-  return gulp.src('defs.d.ts', { read: false })
-    .pipe(plugins.clean());
+  return del('defs.d.ts');
 });
 
 gulp.task('example-tsc', ['tsc'], function() {
@@ -126,8 +119,7 @@ gulp.task('example-concat', ['example-template'], function() {
 });
 
 gulp.task('example-clean', ['example-concat'], function() {
-  return gulp.src(['test-templates.js', 'test-compiled.js'], { read: false })
-    .pipe(plugins.clean());
+  return del(['test-templates.js', 'test-compiled.js']);
 });
 
 gulp.task('tsc', ['clean-defs'], function() {
@@ -147,14 +139,13 @@ gulp.task('tsc', ['clean-defs'], function() {
         .pipe(gulp.dest('.')),
       tsResult.dts
         .pipe(gulp.dest('d.ts')))
-        .pipe(map(function(buf, filename) {
-          if (!s.endsWith(filename, 'd.ts')) {
-            return buf;
-          }
-          var relative = path.relative(cwd, filename);
-          fs.appendFileSync('defs.d.ts', '/// <reference path="' + relative + '"/>\n');
-          return buf;
-        }));
+        .pipe(plugins.filter('**/*.d.ts'))
+        .pipe(plugins.concatFilenames('defs.d.ts', {
+          root: cwd,
+          prepend: '/// <reference path="',
+          append: '"/>'
+        }))
+        .pipe(gulp.dest('.'));
 });
 
 gulp.task('tslint', function(){
@@ -206,8 +197,7 @@ gulp.task('concat', ['template'], function() {
 });
 
 gulp.task('clean', ['concat'], function() {
-  return gulp.src(['templates.js', 'compiled.js'], { read: false })
-    .pipe(plugins.clean());
+  return del(['templates.js', 'compiled.js']);
 });
 
 gulp.task('watch-less', function() {
@@ -357,21 +347,21 @@ gulp.task('usemin', ['site-files'], function() {
   return gulp.src('index.html')
     .pipe(plugins.usemin({
       css: [plugins.minifyCss({
-        keepBreaks: true                       
+        keepBreaks: true
       }), 'concat'],
       js: [
         plugins.sourcemaps.init({
           loadMaps: true
-        }), 
-        plugins.uglify(), 
+        }),
+        plugins.uglify(),
         plugins.rev(),
         plugins.sourcemaps.write('./')
       ],
       js1: [
         plugins.sourcemaps.init({
           loadMaps: true
-        }), 
-        plugins.uglify(), 
+        }),
+        plugins.uglify(),
         plugins.rev(),
         plugins.sourcemaps.write('./')
       ]
@@ -417,13 +407,14 @@ gulp.task('copy-images', ['404', 'tweak-urls'], function() {
 });
 
 gulp.task('collect-dep-versions', ['get-commit-id'], function() {
-  return gulp.src('libs/**/.bower.json')
-    .pipe(map(function(buf, filename) {
-      var pkg = JSON.parse(buf.toString());
-      bower.packages[pkg.name] = {
-        version: pkg.version
-      };
-    }));
+  return gulp.src('./libs/**/.bower.json')
+          .pipe(plugins.foreach(function(stream, file) {
+            var pkg = JSON.parse(file.contents.toString('utf8'));
+            bower.packages[pkg.name] = {
+              version: pkg.version
+            };
+            return stream;
+          }));
 });
 
 gulp.task('get-commit-id', function(cb) {
@@ -440,7 +431,7 @@ gulp.task('write-version-json', ['collect-dep-versions'], function(cb) {
 
 gulp.task('deploy', function(cb) {
   ghPages.publish(
-    path.join(__dirname, 'site'), 
+    path.join(__dirname, 'site'),
     {
       clone: '.publish',
       branch: 'builds',
