@@ -1,10 +1,13 @@
 {
   "name": "openshift-jvm",
-  "version": "1.0.37",
-  "commitId": "e8aa0b7ca47d0b31fc4dd0061bd0ddbfff465767",
+  "version": "1.0.38",
+  "commitId": "a66d86a1f680f789f63a89d74389cbedc33cbbe4",
   "packages": {
     "angular": {
       "version": "1.3.20"
+    },
+    "angular-patternfly": {
+      "version": "2.7.0"
     },
     "angular-resource": {
       "version": "1.3.20"
@@ -16,10 +19,10 @@
       "version": "1.3.20"
     },
     "bootstrap": {
-      "version": "3.3.5"
+      "version": "3.3.6"
     },
     "codemirror": {
-      "version": "5.7.0"
+      "version": "5.10.0"
     },
     "dagre": {
       "version": "0.7.4"
@@ -29,37 +32,37 @@
       "version": "1.0.7"
     },
     "hawtio-core": {
-      "version": "2.0.19"
+      "version": "2.0.25"
     },
     "hawtio-core-dts": {
-      "version": "2.0.21"
+      "version": "2.0.22"
     },
     "hawtio-core-navigation": {
-      "version": "2.0.52"
+      "version": "2.0.54"
     },
     "hawtio-extension-service": {
-      "version": "2.0.2"
+      "version": "2.0.3"
     },
     "hawtio-forms": {
-      "version": "2.0.17"
+      "version": "2.0.28"
     },
     "hawtio-integration": {
-      "version": "2.0.7"
+      "version": "2.0.10"
     },
     "hawtio-jmx": {
-      "version": "2.0.56"
+      "version": "2.0.60"
     },
     "hawtio-preferences": {
-      "version": "2.0.4"
+      "version": "2.0.5"
     },
     "hawtio-template-cache": {
-      "version": "2.0.4"
+      "version": "2.0.5"
     },
     "hawtio-ui": {
-      "version": "2.0.58"
+      "version": "2.0.70"
     },
     "hawtio-utilities": {
-      "version": "2.0.25"
+      "version": "2.0.26"
     },
     "jquery": {
       "version": "2.1.4"
@@ -70,17 +73,14 @@
     "lodash": {
       "version": "3.2.0"
     },
-    "PatternFly": {
-      "version": "1.1.4"
+    "patternfly": {
+      "version": "2.7.0"
     },
     "toastr": {
       "version": "2.1.2"
     },
-    "URIjs": {
-      "version": "1.14.2"
-    },
     "urijs": {
-      "version": "1.16.1"
+      "version": "1.17.0"
     },
     "zeroclipboard": {
       "version": "2.2.0"
