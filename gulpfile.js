@@ -425,7 +425,7 @@ gulp.task('get-commit-id', function(cb) {
   });
 });
 
-gulp.task('write-version-json', ['collect-dep-versions'], function(cb) {
+gulp.task('write-version-json', ['site-files', 'collect-dep-versions'], function(cb) {
   fs.writeFile('site/version.json', getVersionString(), cb);
 });
 
@@ -452,6 +452,3 @@ gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'less', 'template',
 gulp.task('build-example', ['example-tsc', 'example-template', 'example-concat', 'example-clean']);
 
 gulp.task('default', ['connect']);
-
-
-
