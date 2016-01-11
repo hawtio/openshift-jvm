@@ -351,20 +351,12 @@ gulp.task('usemin', ['site-files'], function() {
         keepBreaks: true
       }), 'concat'],
       js: [
-        plugins.sourcemaps.init({
-          loadMaps: true
-        }),
         plugins.uglify(),
         plugins.rev(),
-        plugins.sourcemaps.write('./')
       ],
       js1: [
-        plugins.sourcemaps.init({
-          loadMaps: true
-        }),
         plugins.uglify(),
         plugins.rev(),
-        plugins.sourcemaps.write('./')
       ]
     }))
     .pipe(plugins.debug({title: 'usemin'}))
