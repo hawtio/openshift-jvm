@@ -5228,22 +5228,20 @@ button.toast-close-button{padding:0;cursor:pointer;background:0 0;border:0;-webk
 #log-panel,.logbar{box-shadow:0 1px 10px rgba(0,0,0,.1)}
 .clickable,.mouse-pointer,.pointer{cursor:pointer}
 *,.modal,.ngViewport:focus,a:focus{outline:0}
-.list-row,.property-name{white-space:nowrap}
 .bundle-item>a:hover,.clickable,.clickable:hover,.file-name:hover,.wiki-file-list-up:hover{text-decoration:none}
 .log-table>li,.tocify li,ol.zebra-list>li,ul.zebra-list>li{list-style-type:none}
 .column-box,.column-box-half-screen,.column-box-square,.column-box-variable,.health-displays .health-display{position:relative;display:inline-block;width:300px;height:300px;margin-left:0;margin-right:0;margin-bottom:10px;overflow:hidden;vertical-align:top}
-.column-box-icons>.span1,.column-box-square,.column-box-square>i,.list-row .ngCellText,.list-row-select>input{vertical-align:middle}
 .column-box-half-screen>div,.column-box-square>div,.column-box-variable>div,.column-box>div,.health-displays .health-display>div{position:relative;height:100%;margin:10px}
 .column-box h3,.column-box-half-screen h3,.column-box-square h3,.column-box-variable h3,.health-displays .health-display h3{text-overflow:ellipsis;line-height:normal;margin-bottom:0}
 .column-box .file-icon>*,.column-box-half-screen .file-icon>*,.column-box-square .file-icon>*,.column-box-variable .file-icon>*,.health-displays .health-display .file-icon>*{width:100%;height:auto}
 .column-box{height:auto;min-height:175px;width:500px}
 .column-box-half-screen{width:50%;min-width:auto;height:auto}
-.column-box-square{height:32px;width:32px;line-height:28px;text-align:center}
-.column-box-square>i{font-size:24px;height:24px}
+.column-box-square{height:32px;width:32px;line-height:28px;vertical-align:middle;text-align:center}
+.column-box-square>i{font-size:24px;height:24px;vertical-align:middle}
 .column-box-variable{height:auto;min-height:175px;width:auto;min-width:175px;max-width:500px}
 .column-box-variable>h3{margin-bottom:0}
 .column-box-selected .column-box-header{font-size:150%;font-weight:700}
-.column-box-icons>.span1{text-align:center;width:32px}
+.column-box-icons>.span1{text-align:center;vertical-align:middle;width:32px}
 .column-box-icons i,.column-box-icons img{font-size:32px;width:32px}
 #log-panel-statements li,*,body{font-family:OpenSans}
 #log-panel-statements li pre span,.log-stack-trace>dd>ul>li>.stack-line *,.log-table :not(i),.log-table>li>div>div,div.log-stack-trace,div.log-stack-trace p,div.stack-line,fs-donut svg g text.units,pre.stack-line{font-family:DroidSansMonoRegular}
@@ -5520,13 +5518,11 @@ ol.zebra-list>li:before{content:counter(li);counter-increment:li;padding:7px;fon
 body{padding-top:90px}
 .navbar .brand{font-size:18px}
 .brand>img{height:11px;width:auto}
+.property-name{white-space:nowrap}
 small table tbody tr td.property-name{font-weight:700;text-align:right}
 #canvas{display:inline-block}
 .fill{min-height:100%;height:100%}
 .tab{display:block;margin-left:1em}
-.list-row{height:30px}
-.list-row .ngCellText{padding:0}
-.list-row-contents,.list-row-select{height:100%;vertical-align:middle}
 li.attr-column{width:1em}
 .navbar-fixed-top{margin-bottom:0}
 .navbar .btn-navbar span:after{font-family:FontAwesome;content:"\f0de";margin-left:7px}
@@ -5579,7 +5575,7 @@ input.ng-invalid-pattern,input.ng-invalid-pattern:focus{border-color:#e9322d;-we
 th>.indicator:before{display:inline-block;content:"\00a0";margin-left:12px}
 .ngCellText .icon-replication-controller{width:32px}
 .connect-column{display:inline-block;vertical-align:top;width:550px}
-.app-logo i,.app-logo img,.container-group-header,.discovery>li>div,.discovery>li>div:first-child>img,.service-list i:before,.service-list img,.table td,.table th,.window-inner>*{vertical-align:middle}
+.app-logo i,.app-logo img,.container-group-header,.discovery>li>div,.discovery>li>div:first-child>img,.table td,.table th,.window-inner>*{vertical-align:middle}
 .icon-spacer:before{content:'\00a0';width:11px}
 .dropdown-menu>li>a{cursor:pointer;padding-left:15px;padding-right:15px}
 .scrollable-section{overflow-x:hidden;overflow-y:auto;max-height:260px}
@@ -5624,14 +5620,14 @@ img.nodeIcon:hover{opacity:.6;box-shadow:2px 2px 19px #a0a0a0;background-color:#
 .app-logo{width:64px;margin-right:10px}
 .app-logo i,.app-logo img{font-size:64px;height:64px;width:auto;line-height:64px}
 .app-logo img.girthy{height:auto;width:64px}
-.service-list i:before,.service-list img{height:16px;width:auto;font-size:16px}
+.service-list i:before,.service-list img{height:16px;width:auto;font-size:16px;vertical-align:middle}
 .service-list img.girthy{height:auto;width:16px}
 .separator{padding-top:4px}
 .container-group-header{line-height:18px;font-weight:700;padding:4px;margin-top:10px}
 .search-query.has-text{background:#5df;color:#333}
 .dataTables_filter input{border-radius:15px}
 .td-fixed-width-150{white-space:normal;width:150px}
-.badge,.contained,.ep.editing,.log-table>li>div>div{white-space:nowrap}
+.badge,.contained,.ep.editing,.hawtio-list-row,.log-table>li>div>div{white-space:nowrap}
 .pod-label{margin-right:1em}
 td>.zebra-list>li{padding:2px}
 ul.nav select{height:25px}
@@ -5646,7 +5642,8 @@ table.dataTable tbody tr td{overflow:hidden;white-space:nowrap;text-overflow:ell
 .ngRow .ngCell:last-child{border-right:none}
 .ngRow:last-child{border-bottom:none}
 .ngFooterTotalItems span:first-child{margin-right:.5em}
-.simple-table-checkbox,.simple-table-checkbox>input{vertical-align:middle;margin:0;width:16px;line-height:16px;max-width:16px}
+.simple-table-checkbox{padding:0!important;width:36px}
+.simple-table-checkbox input{min-width:16px;margin:3px 10px}
 .editor-autoresize .CodeMirror{height:auto}
 .badge{padding:2px 9px;font-size:11.84px;font-weight:700;line-height:14px;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,.25);vertical-align:baseline;background-color:#999;-webkit-border-radius:9px;-moz-border-radius:9px;border-radius:9px}
 .badge-important{background-color:#b94a48}
@@ -5718,6 +5715,11 @@ editable-property{position:relative}
 .expandable.closed .expandable-indicator:before{content:"\f054"}
 .expandable.closed .expandable-indicator.folder:before{content:"\F07B"}
 .expandable.closed .expandable-body{display:none}
+.hawtio-list-row{height:30px}
+.hawtio-list-row .ngCellText{padding:0;vertical-align:middle}
+.hawtio-list-row-contents,.hawtio-list-row-select{height:100%;vertical-align:middle}
+.hawtio-list-row-select>input{vertical-align:middle}
+.hawtio-list-row-contents,.hawtio-list-row-contents>.ngCellText,.hawtio-list-row-select{display:inline-block}
 #log-panel{position:fixed;top:-5px;left:30px;right:30px;bottom:50%;z-index:10000;background:inherit;transition:bottom 1s ease-in-out}
 #log-panel>div{position:relative;width:100%;height:100%}
 #log-panel #log-panel-statements{margin-left:0;margin-bottom:0;position:absolute;top:0;left:0;right:0;bottom:20px;overflow-y:auto}
@@ -5829,7 +5831,7 @@ div.log-stack-trace p{line-height:14px;margin-bottom:2px}
 .hawtio-toc .panel-title{padding:0;margin-top:20px;margin-bottom:20px}
 .hawtio-toc .panel-title a{display:block;text-align:center;padding:10px}
 .inline{display:inline}
-.inline-block,.list-row-contents,.list-row-contents>.ngCellText,.list-row-select{display:inline-block}
+.inline-block{display:inline-block}
 ol.inline,ul.inline{margin-left:0;list-style:none}
 ol.inline>li,ul.inline>li{display:inline-block;padding-right:2px;padding-left:2px}
 .red{color:red!important}
@@ -6048,8 +6050,8 @@ caption{font-weight:700}
 .config-admin-form .form-horizontal .control-label{width:260px}
 .config-admin-form .form-horizontal .controls{margin-left:280px}
 .new-config-name-form{margin-top:30px}
-body{padding-top:140px}
-.pane{top:135px}
+body{padding-top:170px}
+.pane{top:165px}
 .navbar-fixed-top [hawtio-sub-tabs]{float:none;display:block}
 .navbar-pf{border-top:3px solid red}
 .navbar-persistent>li.dropdown-submenu.open>.dropdown-toggle:after,.navbar-persistent>li.open>a:after,.navbar-persistent>li:hover>a:after{border-top-color:#222}
