@@ -31,6 +31,36 @@
 
     <!-- endbuild -->
 
+  </head>
+
+  <body ng-controller="OpenshiftJvm.MainController">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-pf" role="navigation" ng-cloak>
+      <div class="navbar-header">
+        <span class="navbar-brand">
+          <img src="img/logo-origin-thin.svg">
+        </span>
+      </div>
+      <ul class="nav navbar-nav navbar-utility">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="pficon pficon-user"></span>
+            User <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" hawtio-extension name="hawtio-user"></ul>
+        </li>
+      </ul>
+      <div class="container-header">
+        <h4>Connected to <span ng-bind="containerName"></span></h4>
+        <a ng-show="goBack" href="" ng-click="goBack()"><i class="fa fa-arrow-left"></i> Back</a>
+      </div>
+      <ul class="nav navbar-nav navbar-primary" hawtio-main-nav></ul>
+      <ul class="nav navbar-nav navbar-persistent" hawtio-sub-tabs></ul>
+    </nav>
+
+    <div id="main" class="container-fluid ng-cloak" ng-controller="HawtioNav.ViewController">
+      <div ng-include src="viewPartial"></div>
+    </div>
+
     <!-- build:js libs.js -->
     <!-- ES6/ES6 shim -->
     <script src="libs/es5-dom-shim/__COMPILE/a.js"></script>
@@ -104,36 +134,6 @@
     <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
     <script src="libs/patternfly/dist/js/patternfly.js"></script>
     <!-- endbuild -->
-
-  </head>
-
-  <body ng-controller="OpenshiftJvm.MainController">
-    <nav class="navbar navbar-default navbar-fixed-top navbar-pf" role="navigation" ng-cloak>
-      <div class="navbar-header">
-        <span class="navbar-brand">
-          <img src="img/logo-origin-thin.svg">
-        </span>
-      </div>
-      <ul class="nav navbar-nav navbar-utility">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="pficon pficon-user"></span>
-            User <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu" hawtio-extension name="hawtio-user"></ul>
-        </li>
-      </ul>
-      <div class="container-header">
-        <h4>Connected to <span ng-bind="containerName"></span></h4>
-        <a ng-show="goBack" href="" ng-click="goBack()"><i class="fa fa-arrow-left"></i> Back</a>
-      </div>
-      <ul class="nav navbar-nav navbar-primary" hawtio-main-nav></ul>
-      <ul class="nav navbar-nav navbar-persistent" hawtio-sub-tabs></ul>
-    </nav>
-
-    <div id="main" class="container-fluid ng-cloak" ng-controller="HawtioNav.ViewController">
-      <div ng-include src="viewPartial"></div>
-    </div>
 
     <!-- add any scripts under dist/ here -->
     <!-- build:js1 app.js -->
