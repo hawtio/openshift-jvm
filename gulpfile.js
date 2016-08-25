@@ -314,7 +314,7 @@ gulp.task('reload', function() {
 
 // 'site' tasks
 gulp.task('site-fonts', function() {
-  return gulp.src(['libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf'], { base: '.' })
+  return gulp.src(['libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf', 'libs/**/fonts/*.eot', 'libs/**/fonts/*.svg'], { base: '.' })
     .pipe(plugins.flatten())
     .pipe(plugins.chmod(644))
     .pipe(plugins.dedupe({ same: false }))
@@ -369,6 +369,9 @@ gulp.task('usemin', ['site-files'], function() {
 gulp.task('tweak-urls', ['usemin'], function() {
   return gulp.src('site/style.css')
     .pipe(plugins.replace(/url\(\.\.\//g, 'url('))
+    // tweak fonts URL coming from PatternFly that does not repackage then in dist
+    .pipe(plugins.replace(/url\(\.\.\/components\/font-awesome\//g, 'url('))
+    .pipe(plugins.replace(/url\(\.\.\/components\/bootstrap\/dist\//g, 'url('))
     .pipe(plugins.replace(/url\(libs\/bootstrap\/dist\//g, 'url('))
     .pipe(plugins.replace(/url\(libs\/patternfly\/components\/bootstrap\/dist\//g, 'url('))
     .pipe(plugins.debug({title: 'tweak-urls'}))
@@ -396,6 +399,8 @@ gulp.task('copy-images', ['404', 'tweak-urls'], function() {
       // ignore, file does not exist
     }
   });
+  // Add PatternFly images package in dist
+  patterns.push('libs/patternfly/dist/img/**');
   return gulp.src(patterns)
            .pipe(plugins.debug({ title: 'img-copy' }))
            .pipe(plugins.chmod(644))

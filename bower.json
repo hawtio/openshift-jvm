@@ -28,6 +28,6 @@
     "hawtio-core-dts": "~2.0.0"
   },
   "resolutions": {
-    "lodash": "~3.2.0"
+    "angular": ">= 1.5.0 <= 1.6.0"
   }
 }
