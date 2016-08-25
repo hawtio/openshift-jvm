@@ -399,6 +399,8 @@ gulp.task('copy-images', ['404', 'tweak-urls'], function() {
       // ignore, file does not exist
     }
   });
+  // Add PatternFly images package in dist
+  patterns.push('libs/patternfly/dist/img/**');
   return gulp.src(patterns)
            .pipe(plugins.debug({ title: 'img-copy' }))
            .pipe(plugins.chmod(644))
