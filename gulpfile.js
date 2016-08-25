@@ -369,6 +369,9 @@ gulp.task('usemin', ['site-files'], function() {
 gulp.task('tweak-urls', ['usemin'], function() {
   return gulp.src('site/style.css')
     .pipe(plugins.replace(/url\(\.\.\//g, 'url('))
+    // tweak fonts URL coming from PatternFly that does not repackage then in dist
+    .pipe(plugins.replace(/url\(\.\.\/components\/font-awesome\//g, 'url('))
+    .pipe(plugins.replace(/url\(\.\.\/components\/bootstrap\/dist\//g, 'url('))
     .pipe(plugins.replace(/url\(libs\/bootstrap\/dist\//g, 'url('))
     .pipe(plugins.replace(/url\(libs\/patternfly\/components\/bootstrap\/dist\//g, 'url('))
     .pipe(plugins.debug({title: 'tweak-urls'}))
