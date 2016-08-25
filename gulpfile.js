@@ -314,7 +314,7 @@ gulp.task('reload', function() {
 
 // 'site' tasks
 gulp.task('site-fonts', function() {
-  return gulp.src(['libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf'], { base: '.' })
+  return gulp.src(['libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf', 'libs/**/fonts/*.eot', 'libs/**/fonts/*.svg'], { base: '.' })
     .pipe(plugins.flatten())
     .pipe(plugins.chmod(644))
     .pipe(plugins.dedupe({ same: false }))
