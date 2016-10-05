@@ -1,7 +1,7 @@
 {
   "name": "openshift-jvm",
-  "version": "1.0.48",
-  "commitId": "fb04082d5002ed1f9ae163ea36654c51d8e4890d",
+  "version": "1.0.49",
+  "commitId": "170061ba9481212db2c9de975de07b1204a59bfb",
   "packages": {
     "angular": {
       "version": "1.5.8"
@@ -52,7 +52,7 @@
       "version": "2.0.40"
     },
     "hawtio-integration": {
-      "version": "2.0.21"
+      "version": "2.0.22"
     },
     "hawtio-jmx": {
       "version": "2.0.78"
