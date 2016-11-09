@@ -19,7 +19,7 @@
     "hawtio-utilities": "~2.0.0",
     "hawtio-jmx": "~2.0.78",
     "hawtio-template-cache": "~2.0.3",
-    "hawtio-integration": "2.0.22",
+    "hawtio-integration": "2.0.23",
     "hawtio-preferences": "~2.0.3",
     "codemirror": "5.18.2",
     "hawtio-ui": "2.0.108"
