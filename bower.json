@@ -1,6 +1,6 @@
 {
   "name": "openshift-jvm",
-  "version": "1.0.56",
+  "version": "1.0.57",
   "keywords": [
     "hawtio"
   ],
@@ -31,5 +31,8 @@
     "bootstrap": "3.3.7",
     "patternfly": "2.7.0",
     "hawtio-core-dts": "2.0.28"
+  },
+  "resolutions": {
+    "angular": "1.5.8"
   }
 }
