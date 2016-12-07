@@ -1,5 +1,6 @@
 {
   "name": "openshift-jvm",
+  "version": "1.0.54",
   "keywords": [
     "hawtio"
   ],
