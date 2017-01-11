@@ -224,7 +224,7 @@ gulp.task('watch', ['build', 'build-example', 'watch-less'], function() {
 
 function configStaticAssets(prefix) {
   var staticAssets = [{
-      path: '/',
+      path: '/console/java',
       dir: prefix
   }];
   var targetDir = urljoin(prefix, 'libs');
@@ -237,7 +237,7 @@ function configStaticAssets(prefix) {
         if (fs.statSync(dir).isDirectory()) {
           console.log("Adding directory to search path: ", dir);
           staticAssets.push({
-            path: '/',
+            path: '/console/java',
             dir: dir
           });
         }
