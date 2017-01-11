@@ -1,7 +1,7 @@
 {
   "name": "openshift-jvm",
-  "version": "1.0.58",
-  "commitId": "5c99a004f8f48c1d863ee6e2c1051b9f29bd496a",
+  "version": "1.0.60",
+  "commitId": "fc6372f60b2527c403177c484bc01fe89d1eb9a8",
   "packages": {
     "angular": {
       "version": "1.5.8"
