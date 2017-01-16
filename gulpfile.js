@@ -316,7 +316,7 @@ gulp.task('reload', function() {
 gulp.task('site-fonts', function() {
   return gulp.src(['libs/**/*.woff', 'libs/**/*.woff2', 'libs/**/*.ttf', 'libs/**/fonts/*.eot', 'libs/**/fonts/*.svg'], { base: '.' })
     .pipe(plugins.flatten())
-    .pipe(plugins.chmod(644))
+    .pipe(plugins.chmod(0o644))
     .pipe(plugins.dedupe({ same: false }))
     .pipe(plugins.debug({title: 'site font files'}))
     .pipe(gulp.dest('site/fonts/', { overwrite: false }));
@@ -325,7 +325,7 @@ gulp.task('site-fonts', function() {
 gulp.task('swf', function() {
   return gulp.src(['libs/**/*.swf'], { base: '.' })
     .pipe(plugins.flatten())
-    .pipe(plugins.chmod(644))
+    .pipe(plugins.chmod(0o644))
     .pipe(plugins.dedupe({ same: false }))
     .pipe(plugins.debug({title: 'swf files'}))
     .pipe(gulp.dest('site/img/', { overwrite: false }));
@@ -335,13 +335,13 @@ gulp.task('root-files', ['swf'], function() {
   return gulp.src(['favicon.ico'], { base: '.' })
     .pipe(plugins.flatten())
     .pipe(plugins.debug({title: 'root files'}))
-    .pipe(plugins.chmod(644))
+    .pipe(plugins.chmod(0o644))
     .pipe(gulp.dest('site'));
 })
 
 gulp.task('site-files', ['root-files', 'site-fonts'], function() {
   return gulp.src(['images/**', 'img/**'], {base: '.'})
-    .pipe(plugins.chmod(644))
+    .pipe(plugins.chmod(0o644))
     .pipe(plugins.dedupe({ same: false }))
     .pipe(plugins.debug({title: 'site images'}))
     .pipe(gulp.dest('site'));
@@ -403,7 +403,7 @@ gulp.task('copy-images', ['404', 'tweak-urls'], function() {
   patterns.push('libs/patternfly/dist/img/**');
   return gulp.src(patterns)
            .pipe(plugins.debug({ title: 'img-copy' }))
-           .pipe(plugins.chmod(644))
+           .pipe(plugins.chmod(0o644))
            .pipe(gulp.dest('site/img'));
 });
 
