@@ -47,14 +47,14 @@ var config = {
     target: 'ES5',
     module: 'commonjs',
     declarationFiles: true,
-    noExternalResolve: false,
+    noResolve: false,
     removeComments: true
   }),
   testTsProject: plugins.typescript.createProject({
     target: 'ES5',
     module: 'commonjs',
     declarationFiles: false,
-    noExternalResolve: false
+    noResolve: false
   }),
   tsLintOptions: {
     rulesDirectory: './tslint-rules/',
