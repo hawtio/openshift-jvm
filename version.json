@@ -1,7 +1,7 @@
 {
   "name": "openshift-jvm",
-  "version": "1.1.1",
-  "commitId": "6c6b0574ff8928368393c153e644fceac4e8652a",
+  "version": "1.1.2",
+  "commitId": "d3e46c3ee4b781c925af0f73dbbe04d5325775cf",
   "packages": {
     "angular": {
       "version": "1.5.11"
@@ -9,10 +9,10 @@
     "angular-bootstrap": {
       "version": "0.13.4"
     },
-    "angular-route": {
+    "angular-resource": {
       "version": "1.5.11"
     },
-    "angular-resource": {
+    "angular-route": {
       "version": "1.5.11"
     },
     "angular-sanitize": {
@@ -24,17 +24,17 @@
     "codemirror": {
       "version": "5.19.0"
     },
-    "dagre": {
-      "version": "0.7.4"
-    },
     "d3": {
       "version": "3.5.17"
     },
-    "graphlib": {
-      "version": "1.0.7"
+    "dagre": {
+      "version": "0.7.4"
     },
     "font-awesome": {
       "version": "4.7.0"
+    },
+    "graphlib": {
+      "version": "1.0.7"
     },
     "hawtio-core": {
       "version": "2.0.37"
