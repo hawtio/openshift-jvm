@@ -4465,6 +4465,13 @@ a.disabled{color:#8b8d8f;cursor:not-allowed;text-decoration:none}
 .list-view-pf-additional-info-item .list-view-pf-expand{margin:0;padding:0}
 .list-view-pf-expand .fa-angle-right{cursor:pointer;font-size:17px;margin-right:5px;margin-top:2px;width:10px}
 .list-group-item-container{background:#fff;border-top:solid 1px #39a5dc;box-sizing:content-box;margin:-1px -15px 0;-ms-flex-order:3;order:3;padding:10px 15px;position:relative;width:100%}
+.list-view-pf-dnd .dndDragging.drag-original{display:none}
+.list-view-pf-dnd .dndDragging.drag-original .list-view-pf-dnd-original-items{display:block}
+.list-view-pf-dnd .dndDragging .list-view-pf-dnd-drag-items{display:inline-block}
+.list-view-pf-dnd .dndDragging .list-view-pf-dnd-original-items,.list-view-pf-dnd-drag-items{display:none}
+.list-view-pf-dnd .dndPlaceholder{background-color:#ededed;padding:20px 0}
+.list-view-pf-dnd .list-group-item-header{margin-left:-10px}
+.list-view-pf-dnd .list-group-item-header:before{background-image:linear-gradient(to bottom,#0088ce 60%,#fff 0);background-position:left;background-repeat:repeat-y;background-size:2px 5px;border:4px solid #00659c;content:"";height:55px;left:4px;position:absolute;top:5px;width:10px}
 .login-pf{height:100%}
 .login-pf #brand{position:relative;top:-70px}
 .login-pf #brand img{display:block;height:18px;margin:0 auto;max-width:100%}
