@@ -350,9 +350,11 @@ gulp.task('site-files', ['root-files', 'site-fonts'], function() {
 gulp.task('usemin', ['site-files'], function() {
   return gulp.src('index.html')
     .pipe(plugins.usemin({
-      css: [plugins.minifyCss({
-        keepBreaks: true
-      }), 'concat'],
+      css: [
+        plugins.dos2unix(),
+        plugins.cleanCss({keepBreaks: true}),
+        'concat'
+      ],
       js: [
         plugins.uglify(),
         plugins.rev(),
