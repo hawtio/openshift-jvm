@@ -1,7 +1,7 @@
 {
   "name": "openshift-jvm",
-  "version": "1.1.5",
-  "commitId": "b267eee08dc66ebc7770c50119ea9c982b51449e",
+  "version": "1.1.6",
+  "commitId": "45c894110dd2045c20a9f3a3625930b6a5fd2a5a",
   "packages": {
     "angular": {
       "version": "1.5.11"
@@ -130,7 +130,7 @@
       "version": "2.14.2"
     },
     "patternfly": {
-      "version": "3.21.0"
+      "version": "3.19.0"
     },
     "bootstrap-combobox": {
       "version": "1.1.7"
