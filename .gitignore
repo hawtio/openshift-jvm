@@ -3,3 +3,4 @@ libs/
 site/
 .publish/
 .vscode/
+npm-debug.log

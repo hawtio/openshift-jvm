@@ -29,7 +29,6 @@ function getVersionString() {
   }, undefined, 2);
 }
 
-
 var config = {
   main: '.',
   ts: ['plugins/**/*.ts'],
@@ -43,19 +42,7 @@ var config = {
   js: pkg.name + '.js',
   testJs: pkg.name + '-test.js',
   css: pkg.name + '.css',
-  tsProject: plugins.typescript.createProject({
-    target: 'ES5',
-    module: 'commonjs',
-    declarationFiles: true,
-    noResolve: false,
-    removeComments: true
-  }),
-  testTsProject: plugins.typescript.createProject({
-    target: 'ES5',
-    module: 'commonjs',
-    declarationFiles: false,
-    noResolve: false
-  }),
+  tsProject: plugins.typescript.createProject('tsconfig.json'),
   tsLintOptions: {
     rulesDirectory: './tslint-rules/',
     emitError: false
@@ -69,86 +56,19 @@ var normalSizeOptions = {
     gzip: true
 };
 
-
 gulp.task('bower', function() {
   gulp.src('index.html')
     .pipe(wiredep({}))
     .pipe(gulp.dest('.'));
 });
 
-/** Adjust the reference path of any typescript-built plugin this project depends on */
-gulp.task('path-adjust', function() {
-  gulp.src('libs/**/includes.d.ts')
-    .pipe(plugins.replace(/"\.\.\/libs/gm, '"../../../libs'))
-    .pipe(gulp.dest('libs'));
-});
-
-gulp.task('clean-defs', function() {
-  return del('defs.d.ts');
-});
-
-gulp.task('example-tsc', ['tsc'], function() {
-  var tsResult = gulp.src(config.testTs)
-    .pipe(plugins.typescript(config.testTsProject))
-    .on('error', plugins.notify.onError({
-      onLast: true,
-      message: '<%= error.message =>',
-      title: 'Typescript compilation error - test'
-    }));
-
-    return tsResult.js
-        .pipe(plugins.concat('test-compiled.js'))
-        .pipe(gulp.dest('.'));
-});
-
-gulp.task('example-template', ['example-tsc'], function() {
-  return gulp.src(config.testTemplates)
-    .pipe(plugins.angularTemplatecache({
-      filename: 'test-templates.js',
-      root: 'test-plugins/',
-      standalone: true,
-      module: config.testTemplateModule,
-      templateFooter: '}]); hawtioPluginLoader.addModule("' + config.testTemplateModule + '");'
-    }))
-    .pipe(gulp.dest('.'));
-});
-
-gulp.task('example-concat', ['example-template'], function() {
-  return gulp.src(['test-compiled.js', 'test-templates.js'])
-    .pipe(plugins.concat(config.testJs))
-    .pipe(plugins.ngAnnotate())
-    .pipe(gulp.dest(config.dist));
-});
-
-gulp.task('example-clean', ['example-concat'], function() {
-  return del(['test-templates.js', 'test-compiled.js']);
-});
-
-gulp.task('tsc', ['clean-defs'], function() {
-  var cwd = process.cwd();
-  var tsResult = gulp.src(config.ts)
+gulp.task('tsc', function() {
+  return gulp.src(config.ts)
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.typescript(config.tsProject))
-    .on('error', plugins.notify.onError({
-      onLast: true,
-      message: '<%= error.message %>',
-      title: 'Typescript compilation error'
-    }));
-
-    return eventStream.merge(
-      tsResult.js
-        .pipe(plugins.concat('compiled.js'))
-        .pipe(plugins.sourcemaps.write())
-        .pipe(gulp.dest('.')),
-      tsResult.dts
-        .pipe(gulp.dest('d.ts')))
-        .pipe(plugins.filter('**/*.d.ts'))
-        .pipe(plugins.concatFilenames('defs.d.ts', {
-          root: cwd,
-          prepend: '/// <reference path="',
-          append: '"/>'
-        }))
-        .pipe(gulp.dest('.'));
+    .pipe(config.tsProject())
+    .js
+    .pipe(plugins.sourcemaps.write())
+    .pipe(gulp.dest('.'));
 });
 
 gulp.task('tslint', function(){
@@ -169,11 +89,6 @@ gulp.task('less', function () {
   return gulp.src(config.less)
     .pipe(plugins.less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .on('error', plugins.notify.onError({
-      onLast: true,
-      message: '<%= error.message %>',
-      title: 'less file compilation error'
     }))
     .pipe(plugins.concat(config.css))
     .pipe(gulp.dest('./dist'));
@@ -210,15 +125,12 @@ gulp.task('watch-less', function() {
   });
 });
 
-gulp.task('watch', ['build', 'build-example', 'watch-less'], function() {
+gulp.task('watch', ['build', 'watch-less'], function() {
   plugins.watch(['libs/**/*.js', 'libs/**/*.css', 'index.html', urljoin(config.dist, config.js), urljoin(config.dist, config.css)], function() {
     gulp.start('reload');
   });
   plugins.watch(['libs/**/*.d.ts', config.ts, config.templates], function() {
     gulp.start(['tslint-watch', 'tsc', 'template', 'concat', 'clean']);
-  });
-  plugins.watch([config.testTs, config.testTemplates], function() {
-    gulp.start(['example-tsc', 'example-template', 'example-concat', 'example-clean']);
   });
 });
 
@@ -449,8 +361,6 @@ gulp.task('deploy', function(cb) {
 
 gulp.task('site', ['site-fonts', 'swf', 'root-files', 'site-files', 'usemin', 'tweak-urls', '404', 'copy-images', 'write-version-json']);
 
-gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'less', 'template', 'concat', 'clean']);
-
-gulp.task('build-example', ['example-tsc', 'example-template', 'example-concat', 'example-clean']);
+gulp.task('build', ['bower', 'tslint', 'tsc', 'less', 'template', 'concat', 'clean']);
 
 gulp.task('default', ['connect']);
