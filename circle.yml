@@ -1,5 +1,6 @@
 machine:
-  services:
+  node:
+    version: v6.1.0
 
 branches:
   ignore:
@@ -7,8 +8,10 @@ branches:
 
 dependencies:
   pre:
-    - npm install -g bower gulp
+    - npm install -g bower
+    - npm install
     - npm update
+    - bower install
     - bower update
     - rm -Rf site/*
   override:
