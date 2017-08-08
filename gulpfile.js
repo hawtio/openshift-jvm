@@ -62,13 +62,37 @@ gulp.task('bower', function() {
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('tsc', function() {
-  return gulp.src(config.ts)
+/** Adjust the reference path of any typescript-built plugin this project depends on */
+gulp.task('path-adjust', function() {
+  gulp.src('libs/**/includes.d.ts')
+    .pipe(plugins.replace(/"\.\.\/libs/gm, '"../../../libs'))
+    .pipe(gulp.dest('libs'));
+});
+
+gulp.task('clean-defs', function() {
+  return del('defs.d.ts');
+});
+
+gulp.task('tsc', ['clean-defs'], function() {
+  var cwd = process.cwd();
+  var tsResult = gulp.src(config.ts)
     .pipe(plugins.sourcemaps.init())
-    .pipe(config.tsProject())
-    .js
-    .pipe(plugins.sourcemaps.write())
-    .pipe(gulp.dest('.'));
+    .pipe(config.tsProject());
+
+    return eventStream.merge(
+    tsResult.js
+      .pipe(plugins.concat('compiled.js'))
+      .pipe(plugins.sourcemaps.write())
+      .pipe(gulp.dest('.')),
+    tsResult.dts
+      .pipe(gulp.dest('d.ts')))
+      .pipe(plugins.filter('**/*.d.ts'))
+      .pipe(plugins.concatFilenames('defs.d.ts', {
+        root: cwd,
+        prepend: '/// <reference path="',
+        append: '"/>'
+      }))
+      .pipe(gulp.dest('.'));    
 });
 
 gulp.task('tslint', function(){
@@ -196,9 +220,9 @@ gulp.task('connect', ['watch', 'collect-dep-versions'], function() {
     port: 2772,
     staticProxies: [
     {
-      port: 8080,
+      port: 8282,
       path: '/jolokia',
-      targetPath: '/jolokia'
+      targetPath: '/hawtio/jolokia'
     }
     ],
     staticAssets: staticAssets,
@@ -361,6 +385,6 @@ gulp.task('deploy', function(cb) {
 
 gulp.task('site', ['site-fonts', 'swf', 'root-files', 'site-files', 'usemin', 'tweak-urls', '404', 'copy-images', 'write-version-json']);
 
-gulp.task('build', ['bower', 'tslint', 'tsc', 'less', 'template', 'concat', 'clean']);
+gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'less', 'template', 'concat', 'clean']);
 
 gulp.task('default', ['connect']);
