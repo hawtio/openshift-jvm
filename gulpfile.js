@@ -264,7 +264,7 @@ gulp.task('usemin', ['site-files'], function() {
     .pipe(plugins.usemin({
       css: [
         plugins.dos2unix(),
-        plugins.cleanCss({keepBreaks: true}),
+        plugins.cleanCss({format: 'keep-breaks'}),
         'concat'
       ],
       js: [

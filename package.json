@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
-    "postinstall": "bower install"
+    "build": "gulp build"
   },
   "devDependencies": {
-    "bower": "^1.0.0",
     "del": "^2.0.0",
     "event-stream": "^3.0.0",
     "gh-pages": "~0.12.0",
@@ -15,7 +13,7 @@
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-bower-versions": "~0.1.0",
     "gulp-chmod": "^2.0.0",
-    "gulp-clean-css": "^2.0.0",
+    "gulp-clean-css": "^3.0.0",
     "gulp-concat": "^2.0.0",
     "gulp-concat-filenames": "^1.0.0",
     "gulp-debug": "^3.0.0",
