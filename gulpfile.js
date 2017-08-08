@@ -62,18 +62,7 @@ gulp.task('bower', function() {
     .pipe(gulp.dest('.'));
 });
 
-/** Adjust the reference path of any typescript-built plugin this project depends on */
-gulp.task('path-adjust', function() {
-  gulp.src('libs/**/includes.d.ts')
-    .pipe(plugins.replace(/"\.\.\/libs/gm, '"../../../libs'))
-    .pipe(gulp.dest('libs'));
-});
-
-gulp.task('clean-defs', function() {
-  return del('defs.d.ts');
-});
-
-gulp.task('tsc', ['clean-defs'], function() {
+gulp.task('tsc', function() {
   var cwd = process.cwd();
   var tsResult = gulp.src(config.ts)
     .pipe(plugins.sourcemaps.init())
@@ -385,6 +374,6 @@ gulp.task('deploy', function(cb) {
 
 gulp.task('site', ['site-fonts', 'swf', 'root-files', 'site-files', 'usemin', 'tweak-urls', '404', 'copy-images', 'write-version-json']);
 
-gulp.task('build', ['bower', 'path-adjust', 'tslint', 'tsc', 'less', 'template', 'concat', 'clean']);
+gulp.task('build', ['bower', 'tslint', 'tsc', 'less', 'template', 'concat', 'clean']);
 
 gulp.task('default', ['connect']);
