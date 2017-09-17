@@ -2,3 +2,4 @@ node_modules/
 libs/
 site/
 .publish/
+.vscode

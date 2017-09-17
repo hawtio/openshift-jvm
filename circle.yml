@@ -1,7 +1,6 @@
 machine:
   node:
-    version: 0.12.2
-  services:
+    version: v6.1.0
 
 branches:
   ignore:
@@ -25,5 +24,3 @@ deployment:
     owner: hawtio
     commands:
       - bash maybeDeploy.sh
-
-

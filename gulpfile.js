@@ -89,12 +89,7 @@ gulp.task('clean-defs', function() {
 
 gulp.task('example-tsc', ['tsc'], function() {
   var tsResult = gulp.src(config.testTs)
-    .pipe(plugins.typescript(config.testTsProject))
-    .on('error', plugins.notify.onError({
-      onLast: true,
-      message: '<%= error.message =>',
-      title: 'Typescript compilation error - test'
-    }));
+    .pipe(plugins.typescript(config.testTsProject));
 
     return tsResult.js
         .pipe(plugins.concat('test-compiled.js'))
@@ -128,12 +123,7 @@ gulp.task('tsc', ['clean-defs'], function() {
   var cwd = process.cwd();
   var tsResult = gulp.src(config.ts)
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.typescript(config.tsProject))
-    .on('error', plugins.notify.onError({
-      onLast: true,
-      message: '<%= error.message %>',
-      title: 'Typescript compilation error'
-    }));
+    .pipe(plugins.typescript(config.tsProject));
 
     return eventStream.merge(
       tsResult.js
@@ -169,11 +159,6 @@ gulp.task('less', function () {
   return gulp.src(config.less)
     .pipe(plugins.less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .on('error', plugins.notify.onError({
-      onLast: true,
-      message: '<%= error.message %>',
-      title: 'less file compilation error'
     }))
     .pipe(plugins.concat(config.css))
     .pipe(gulp.dest('./dist'));
@@ -284,7 +269,7 @@ gulp.task('connect', ['watch', 'collect-dep-versions'], function() {
     port: 2772,
     staticProxies: [
     {
-      port: 8282,
+      port: 8181,
       path: '/jolokia',
       targetPath: '/hawtio/jolokia'
     }

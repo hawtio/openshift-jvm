@@ -1,6 +1,6 @@
 {
   "name": "openshift-jvm",
-  "version": "1.0.50",
+  "version": "1.0.61",
   "keywords": [
     "hawtio"
   ],
@@ -14,22 +14,11 @@
     "libs"
   ],
   "dependencies": {
-    "hawtio-core": "~2.0.0",
-    "hawtio-core-navigation": "~2.0.0",
-    "hawtio-utilities": "~2.0.0",
-    "hawtio-jmx": "~2.0.78",
-    "hawtio-template-cache": "~2.0.3",
-    "hawtio-integration": "2.0.22",
-    "hawtio-preferences": "~2.0.3",
-    "codemirror": "5.18.2",
-    "hawtio-ui": "2.0.108"
-  },
-  "devDependencies": {
-    "bootstrap": "3.3.7",
-    "patternfly": "2.7.0",
-    "hawtio-core-dts": "2.0.28"
+    "hawtio-integration": "2.0.28",
+    "codemirror": "5.18.2"
   },
   "resolutions": {
-    "angular": ">= 1.5.0 <= 1.6.0"
+    "angular": "1.5.8",
+    "angular-route": "1.5.8"
   }
 }
