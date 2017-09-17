@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git config --global push.default matching
-git pull --all
+git config --global push.default simple
+git fetch --tags
 
 LATEST=`cat LATEST`
 CURRENT=`git tag --list | grep -v build | sort --version-sort | tail -n 1`
