@@ -4,7 +4,7 @@ git config --global push.default matching
 git fetch --tags
 
 LATEST=`cat LATEST`
-CURRENT=`git tag --list | grep -v build | sort --version-sort | tail -n 1`
+CURRENT="1.0.62"
 
 echo "Latest on disk: $LATEST"
 echo "Latest in repo: $CURRENT"
@@ -27,4 +27,3 @@ then
 else
   echo "Not deploying new build"
 fi
-
