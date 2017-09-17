@@ -20,7 +20,7 @@ test:
 
 deployment:
   website:
-    branch: openshift-3.3
+    branch: /.*?/
     owner: hawtio
     commands:
       - bash maybeDeploy.sh

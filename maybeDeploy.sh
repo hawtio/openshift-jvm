@@ -1,10 +1,10 @@
 #!/bin/bash
 
 git config --global push.default matching
-git fetch --tags
+git pull --all
 
 LATEST=`cat LATEST`
-CURRENT="1.0.62"
+CURRENT=`git tag --list | grep -v build | sort --version-sort | tail -n 1`
 
 echo "Latest on disk: $LATEST"
 echo "Latest in repo: $CURRENT"
