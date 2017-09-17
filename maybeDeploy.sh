@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git config --global push.default simple
+git config --global push.default matching
 git fetch --tags
 
 LATEST=`cat LATEST`
@@ -23,7 +23,8 @@ then
   echo $CURRENT > LATEST && \
   git add LATEST && \
   git commit -m "[ci skip] Updating latest tag" && \
-  git push && git push --tags
+  git pull --all
+  git push --all && git push --tags
 else
   echo "Not deploying new build"
 fi
