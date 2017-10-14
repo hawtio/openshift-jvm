@@ -8,10 +8,8 @@ branches:
 
 dependencies:
   pre:
-    - npm install -g bower
-    - npm install
+    - npm install -g bower gulp
     - npm update
-    - bower install
     - bower update
     - rm -Rf site/*
   override:
@@ -22,7 +20,7 @@ test:
 
 deployment:
   website:
-    branch: master
+    branch: /.*?/
     owner: hawtio
     commands:
       - bash maybeDeploy.sh

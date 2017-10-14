@@ -1,6 +1,6 @@
 {
   "name": "openshift-jvm",
-  "version": "1.1.11",
+  "version": "1.2.0",
   "keywords": [
     "hawtio"
   ],
@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "patternfly": "3.19.0",
-    "hawtio-integration": "~2.1.0",
+    "hawtio-integration": "~2.2.0",
     "hawtio-preferences": "~2.0.0",
     "angular": "1.5.11",
     "angular-sanitize": "1.5.11",
