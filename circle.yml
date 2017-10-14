@@ -23,4 +23,4 @@ deployment:
     branch: /.*?/
     owner: hawtio
     commands:
-      - bash maybeDeploy.sh
+      - bash deploy.sh
