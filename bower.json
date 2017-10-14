@@ -1,6 +1,6 @@
 {
   "name": "openshift-jvm",
-  "version": "1.1.6",
+  "version": "1.1.12",
   "keywords": [
     "hawtio"
   ],
@@ -15,8 +15,8 @@
   ],
   "dependencies": {
     "patternfly": "3.19.0",
-    "hawtio-integration": "~2.1.0",
-    "hawtio-preferences": "~2.0.0",
+    "hawtio-integration": "2.1.6",
+    "hawtio-preferences": "2.0.10",
     "angular": "1.5.11",
     "angular-sanitize": "1.5.11",
     "codemirror": "5.19.0"
@@ -31,5 +31,8 @@
         "dist/js/bootstrap.js"
       ]
     }
+  },
+  "resolutions": {
+    "jquery": "2.1.4"
   }
 }
