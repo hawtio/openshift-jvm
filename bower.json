@@ -1,6 +1,6 @@
 {
   "name": "openshift-jvm",
-  "version": "1.0.67",
+  "version": "1.0.68",
   "keywords": [
     "hawtio"
   ],
@@ -14,7 +14,7 @@
     "libs"
   ],
   "dependencies": {
-    "hawtio-integration": "2.0.28",
+    "hawtio-integration": "2.0.31",
     "codemirror": "5.18.2"
   },
   "resolutions": {
