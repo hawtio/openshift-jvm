@@ -1,5 +1,6 @@
 machine:
-  services:
+  node:
+    version: v6.1.0
 
 branches:
   ignore:
@@ -19,7 +20,7 @@ test:
 
 deployment:
   website:
-    branch: master
+    branch: /.*?/
     owner: hawtio
     commands:
       - bash maybeDeploy.sh
