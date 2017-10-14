@@ -8,7 +8,6 @@ git config --global user.email "circleci@mail.com" && \
 git config --global user.name "circleci" && \
 echo "Cleaning and rebuilding" && \
 rm -Rf site/* && \
-gulp bower path-adjust && \
 gulp build && \
 gulp site && \
 gulp deploy
