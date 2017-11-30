@@ -1,3 +1,5 @@
+var Lint = require("tslint");
+
 function Rule() {
   Lint.Rules.AbstractRule.apply(this, arguments);
 }

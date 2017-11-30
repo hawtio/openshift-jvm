@@ -42,11 +42,7 @@ var config = {
   js: pkg.name + '.js',
   testJs: pkg.name + '-test.js',
   css: pkg.name + '.css',
-  tsProject: plugins.typescript.createProject('tsconfig.json'),
-  tsLintOptions: {
-    rulesDirectory: './tslint-rules/',
-    emitError: false
-  }
+  tsProject: plugins.typescript.createProject('tsconfig.json')
 };
 
 var normalSizeOptions = {
@@ -86,14 +82,22 @@ gulp.task('tsc', function() {
 
 gulp.task('tslint', function(){
   gulp.src(config.ts)
-    .pipe(tslint(config.tsLintOptions))
-    .pipe(tslint.report('verbose'));
+    .pipe(tslint({
+      rulesDirectory: './tslint-rules/',
+      formatter: 'verbose'
+    }))
+    .pipe(tslint.report({
+      emitError: false
+    }));
 });
 
 gulp.task('tslint-watch', function(){
   gulp.src(config.ts)
-    .pipe(tslint(config.tsLintOptions))
-    .pipe(tslint.report('prose', {
+    .pipe(tslint({
+      rulesDirectory: './tslint-rules/',
+      formatter: 'prose'
+    }))
+    .pipe(tslint.report({
       emitError: false
     }));
 });
@@ -133,18 +137,12 @@ gulp.task('clean', ['concat'], function() {
 });
 
 gulp.task('watch-less', function() {
-  plugins.watch(config.less, function() {
-    gulp.start('less');
-  });
+  gulp.watch(config.less, ['less']);
 });
 
 gulp.task('watch', ['build', 'watch-less'], function() {
-  plugins.watch(['libs/**/*.js', 'libs/**/*.css', 'index.html', urljoin(config.dist, config.js), urljoin(config.dist, config.css)], function() {
-    gulp.start('reload');
-  });
-  plugins.watch(['libs/**/*.d.ts', config.ts, config.templates], function() {
-    gulp.start(['tslint-watch', 'tsc', 'template', 'concat', 'clean']);
-  });
+  gulp.watch(['libs/**/*.js', 'libs/**/*.css', 'index.html', urljoin(config.dist, config.js), urljoin(config.dist, config.css)], ['reload']);
+  gulp.watch(['libs/**/*.d.ts', config.ts, config.templates], ['tslint-watch', 'tsc', 'template', 'concat', 'clean']);
 });
 
 function configStaticAssets(prefix) {
