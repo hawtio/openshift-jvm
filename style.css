@@ -6205,7 +6205,6 @@ button.toast-close-button{padding:0;cursor:pointer;background:0 0;border:0;-webk
 .column-box-selected .column-box-header{font-size:150%;font-weight:700}
 .column-box-icons>.span1{text-align:center;vertical-align:middle;width:32px}
 .column-box-icons i,.column-box-icons img{font-size:32px;width:32px}
-body{font-family:OpenSans}
 #log-panel-statements li{font-family:OpenSans}
 #log-panel-statements li pre span{font-family:DroidSansMonoRegular}
 div.log-stack-trace{font-family:DroidSansMonoRegular}
