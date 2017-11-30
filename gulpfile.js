@@ -294,6 +294,9 @@ gulp.task('usemin', ['site-files'], function() {
 gulp.task('tweak-urls', ['usemin'], function() {
   return gulp.src('site/style.css')
     .pipe(plugins.replace(/url\(\.\.\//g, 'url('))
+    .pipe(plugins.replace(/url\(\.\.\/\.\.\/patternfly\/dist\//g, 'url('))
+    .pipe(plugins.replace(/url\(\.\.\/\.\.\/hawtio-ui\/dist\//g, 'url('))
+    .pipe(plugins.replace(/url\(\.\.\/\.\.\/hawtio-ui\//g, 'url('))
     // tweak fonts URL coming from PatternFly that does not repackage then in dist
     .pipe(plugins.replace(/url\(\.\.\/components\/font-awesome\//g, 'url('))
     .pipe(plugins.replace(/url\(\.\.\/components\/bootstrap\/dist\//g, 'url('))
