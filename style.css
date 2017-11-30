@@ -2043,11 +2043,11 @@ li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
 .control-group.warning .combobox-container .caret{border-top-color:#c09853}
 .control-group.success .combobox-container .add-on{color:#468847;border-color:#468847}
 .control-group.success .combobox-container .caret{border-top-color:#468847}
-@font-face{font-family:"Open Sans";font-style:normal;font-weight:300;src:url(../../patternfly/dist/fonts/OpenSans-Light-webfont.eot);src:url(../../patternfly/dist/fonts/OpenSans-Light-webfont.eot?#iefix) format("embedded-opentype"),url(../../patternfly/dist/fonts/OpenSans-Light-webfont.woff) format("woff"),url(../../patternfly/dist/fonts/OpenSans-Light-webfont.ttf) format("truetype"),url(../../patternfly/dist/fonts/OpenSans-Light-webfont.svg#OpenSansLight) format("svg")}
-@font-face{font-family:"Open Sans";font-style:normal;font-weight:400;src:url(../../patternfly/dist/fonts/OpenSans-Regular-webfont.eot);src:url(../../patternfly/dist/fonts/OpenSans-Regular-webfont.eot?#iefix) format("embedded-opentype"),url(../../patternfly/dist/fonts/OpenSans-Regular-webfont.woff) format("woff"),url(../../patternfly/dist/fonts/OpenSans-Regular-webfont.ttf) format("truetype"),url(../../patternfly/dist/fonts/OpenSans-Regular-webfont.svg#OpenSansRegular) format("svg")}
-@font-face{font-family:"Open Sans";font-style:normal;font-weight:600;src:url(../../patternfly/dist/fonts/OpenSans-Semibold-webfont.eot);src:url(../../patternfly/dist/fonts/OpenSans-Semibold-webfont.eot?#iefix) format("embedded-opentype"),url(../../patternfly/dist/fonts/OpenSans-Semibold-webfont.woff) format("woff"),url(../../patternfly/dist/fonts/OpenSans-Semibold-webfont.ttf) format("truetype"),url(../../patternfly/dist/fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold) format("svg")}
-@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;src:url(../../patternfly/dist/fonts/OpenSans-Bold-webfont.eot);src:url(../../patternfly/dist/fonts/OpenSans-Bold-webfont.eot?#iefix) format("embedded-opentype"),url(../../patternfly/dist/fonts/OpenSans-Bold-webfont.woff) format("woff"),url(../../patternfly/dist/fonts/OpenSans-Bold-webfont.ttf) format("truetype"),url(../../patternfly/dist/fonts/OpenSans-Bold-webfont.svg#OpenSansBold) format("svg")}
-@font-face{font-family:"Open Sans";font-style:normal;font-weight:800;src:url(../../patternfly/dist/fonts/OpenSans-ExtraBold-webfont.eot);src:url(../../patternfly/dist/fonts/OpenSans-ExtraBold-webfont.eot?#iefix) format("embedded-opentype"),url(../../patternfly/dist/fonts/OpenSans-ExtraBold-webfont.woff) format("woff"),url(../../patternfly/dist/fonts/OpenSans-ExtraBold-webfont.ttf) format("truetype"),url(../../patternfly/dist/fonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold) format("svg")}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:300;src:url(fonts/OpenSans-Light-webfont.eot);src:url(fonts/OpenSans-Light-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/OpenSans-Light-webfont.woff) format("woff"),url(fonts/OpenSans-Light-webfont.ttf) format("truetype"),url(fonts/OpenSans-Light-webfont.svg#OpenSansLight) format("svg")}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:400;src:url(fonts/OpenSans-Regular-webfont.eot);src:url(fonts/OpenSans-Regular-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/OpenSans-Regular-webfont.woff) format("woff"),url(fonts/OpenSans-Regular-webfont.ttf) format("truetype"),url(fonts/OpenSans-Regular-webfont.svg#OpenSansRegular) format("svg")}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:600;src:url(fonts/OpenSans-Semibold-webfont.eot);src:url(fonts/OpenSans-Semibold-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/OpenSans-Semibold-webfont.woff) format("woff"),url(fonts/OpenSans-Semibold-webfont.ttf) format("truetype"),url(fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold) format("svg")}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:700;src:url(fonts/OpenSans-Bold-webfont.eot);src:url(fonts/OpenSans-Bold-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/OpenSans-Bold-webfont.woff) format("woff"),url(fonts/OpenSans-Bold-webfont.ttf) format("truetype"),url(fonts/OpenSans-Bold-webfont.svg#OpenSansBold) format("svg")}
+@font-face{font-family:"Open Sans";font-style:normal;font-weight:800;src:url(fonts/OpenSans-ExtraBold-webfont.eot);src:url(fonts/OpenSans-ExtraBold-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/OpenSans-ExtraBold-webfont.woff) format("woff"),url(fonts/OpenSans-ExtraBold-webfont.ttf) format("truetype"),url(fonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold) format("svg")}
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -2114,7 +2114,7 @@ h2,h3{page-break-after:avoid}
 .table td,.table th{background-color:#fff!important}
 .table-bordered td,.table-bordered th{border:1px solid #ddd!important}
 }
-@font-face{font-family:'Glyphicons Halflings';src:url(../../patternfly/dist/fonts/glyphicons-halflings-regular.eot);src:url(../../patternfly/dist/fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../../patternfly/dist/fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../../patternfly/dist/fonts/glyphicons-halflings-regular.woff) format('woff'),url(../../patternfly/dist/fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../../patternfly/dist/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
+@font-face{font-family:'Glyphicons Halflings';src:url(fonts/glyphicons-halflings-regular.eot);src:url(fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(fonts/glyphicons-halflings-regular.woff) format('woff'),url(fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
 .glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:400;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .glyphicon-asterisk:before{content:"\002a"}
 .glyphicon-plus:before{content:"\002b"}
@@ -3638,7 +3638,7 @@ td.visible-print,th.visible-print{display:table-cell!important}
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-@font-face{font-family:FontAwesome;src:url(../../patternfly/dist/fonts/fontawesome-webfont.eot?v=4.6.3);src:url(../../patternfly/dist/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format('embedded-opentype'),url(../../patternfly/dist/fonts/fontawesome-webfont.woff2?v=4.6.3) format('woff2'),url(../../patternfly/dist/fonts/fontawesome-webfont.woff?v=4.6.3) format('woff'),url(../../patternfly/dist/fonts/fontawesome-webfont.ttf?v=4.6.3) format('truetype'),url(../../patternfly/dist/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:FontAwesome;src:url(fonts/fontawesome-webfont.eot?v=4.6.3);src:url(fonts/fontawesome-webfont.eot?#iefix&v=4.6.3) format('embedded-opentype'),url(fonts/fontawesome-webfont.woff2?v=4.6.3) format('woff2'),url(fonts/fontawesome-webfont.woff?v=4.6.3) format('woff'),url(fonts/fontawesome-webfont.ttf?v=4.6.3) format('truetype'),url(fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular) format('svg');font-weight:400;font-style:normal}
 .fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}
@@ -4869,7 +4869,7 @@ select.bs-select-hidden,select.selectpicker{display:none!important}
 .bootstrap-datetimepicker-widget .datepicker-decades .decade{line-height:1.8em!important}
 .input-group.date .input-group-addon{cursor:pointer}
 .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}
-.about-modal-pf{background-color:#292e34;background-image:url(../../patternfly/dist/img/bg-modal-about-pf.png);background-position:right bottom;background-repeat:no-repeat;background-size:216px auto}
+.about-modal-pf{background-color:#292e34;background-image:url(img/bg-modal-about-pf.png);background-position:right bottom;background-repeat:no-repeat;background-size:216px auto}
 @media (min-width:768px){
 .about-modal-pf{background-size:auto}
 }
@@ -5118,7 +5118,7 @@ select.bs-select-hidden,select.selectpicker{display:none!important}
 .DTCR_pointer{background-color:#0088ce;width:1px;z-index:201}
 .footer-pf,.footer-pf-alt{background-color:#030303;color:#9c9c9c;font-size:11px;line-height:17px;padding-left:25px;padding-top:10px}
 .layout-pf-alt-fixed-with-footer .footer-pf,.layout-pf-alt-fixed-with-footer .footer-pf-alt,.layout-pf-fixed-with-footer .footer-pf,.layout-pf-fixed-with-footer .footer-pf-alt{bottom:0;left:0;position:fixed;right:0;z-index:1030}
-@font-face{font-family:PatternFlyIcons-webfont;src:url(../../patternfly/dist/fonts/PatternFlyIcons-webfont.eot);src:url(../../patternfly/dist/fonts/PatternFlyIcons-webfont.eot?#iefix) format("embedded-opentype"),url(../../patternfly/dist/fonts/PatternFlyIcons-webfont.ttf) format("truetype"),url(../../patternfly/dist/fonts/PatternFlyIcons-webfont.woff) format("woff"),url(../../patternfly/dist/fonts/PatternFlyIcons-webfont.svg#PatternFlyIcons-webfont) format("svg");font-weight:400;font-style:normal}
+@font-face{font-family:PatternFlyIcons-webfont;src:url(fonts/PatternFlyIcons-webfont.eot);src:url(fonts/PatternFlyIcons-webfont.eot?#iefix) format("embedded-opentype"),url(fonts/PatternFlyIcons-webfont.ttf) format("truetype"),url(fonts/PatternFlyIcons-webfont.woff) format("woff"),url(fonts/PatternFlyIcons-webfont.svg#PatternFlyIcons-webfont) format("svg");font-weight:400;font-style:normal}
 [class*=" pficon-"],[class^=pficon-]{display:inline-block;font-family:PatternFlyIcons-webfont;font-style:normal;font-variant:normal;font-weight:400;line-height:1;speak:none;text-transform:none;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 .pficon-middleware:before{content:"\e917"}
 .pficon-add-circle-o:before{content:"\e61b"}
@@ -5340,7 +5340,7 @@ a.disabled{color:#8b8d8f;cursor:not-allowed;text-decoration:none}
 @media (min-width:768px){
 .login-pf #badge{float:right;margin-right:64px;margin-top:50px}
 }
-.login-pf body{background:#030303 url(../../patternfly/dist/img/bg-login.jpg) repeat-x 50% 0;background-size:auto}
+.login-pf body{background:#030303 url(img/bg-login.jpg) repeat-x 50% 0;background-size:auto}
 @media (min-width:768px){
 .login-pf body{background-size:100% auto}
 }
@@ -5646,14 +5646,14 @@ to{transform:rotate(359deg)}
 .spinner.spinner-sm{border-width:3px;height:18px;width:18px}
 .spinner.spinner-xs{border-width:2px;height:12px;width:12px}
 .spinner.spinner-inverse{border-bottom-color:rgba(255,255,255,.25);border-left-color:rgba(255,255,255,.25);border-right-color:rgba(255,255,255,.25);border-top-color:rgba(255,255,255,.75)}
-.ie9 .spinner{background:url(../../patternfly/dist/img/spinner.gif) no-repeat;border:0}
-.ie9 .spinner.spinner-inverse{background-image:url(../../patternfly/dist/img/spinner-inverse.gif)}
-.ie9 .spinner.spinner-inverse-lg{background-image:url(../../patternfly/dist/img/spinner-inverse-lg.gif)}
-.ie9 .spinner.spinner-inverse-sm{background-image:url(../../patternfly/dist/img/spinner-inverse-sm.gif)}
-.ie9 .spinner.spinner-inverse-xs{background-image:url(../../patternfly/dist/img/spinner-inverse-xs.gif)}
-.ie9 .spinner.spinner-lg{background-image:url(../../patternfly/dist/img/spinner-lg.gif)}
-.ie9 .spinner.spinner-sm{background-image:url(../../patternfly/dist/img/spinner-sm.gif)}
-.ie9 .spinner.spinner-xs{background-image:url(../../patternfly/dist/img/spinner-xs.gif)}
+.ie9 .spinner{background:url(img/spinner.gif) no-repeat;border:0}
+.ie9 .spinner.spinner-inverse{background-image:url(img/spinner-inverse.gif)}
+.ie9 .spinner.spinner-inverse-lg{background-image:url(img/spinner-inverse-lg.gif)}
+.ie9 .spinner.spinner-inverse-sm{background-image:url(img/spinner-inverse-sm.gif)}
+.ie9 .spinner.spinner-inverse-xs{background-image:url(img/spinner-inverse-xs.gif)}
+.ie9 .spinner.spinner-lg{background-image:url(img/spinner-lg.gif)}
+.ie9 .spinner.spinner-sm{background-image:url(img/spinner-sm.gif)}
+.ie9 .spinner.spinner-xs{background-image:url(img/spinner-xs.gif)}
 .prettyprint .atn,.prettyprint .com,.prettyprint .fun,.prettyprint .var{color:#3f9c35}
 .prettyprint .atv,.prettyprint .str{color:#a30000}
 .prettyprint .clo,.prettyprint .dec,.prettyprint .kwd,.prettyprint .opn,.prettyprint .pln,.prettyprint .pun{color:#363636}
@@ -6664,28 +6664,28 @@ td>ul{margin-bottom:0}
 td>.zebra-list>li{padding:2px}
 ul.nav select{margin-bottom:0;height:25px}
 .form-horizontal input+div+.help-block,.form-horizontal select+div+.help-block,.form-horizontal textarea+div+.help-block{margin-top:10px}
-@font-face{font-family:DroidSansMonoRegular;src:url(../../hawtio-ui/dist/fonts/DroidSansMono-webfont.eot) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/DroidSansMono-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/DroidSansMono-webfont.ttf) format('truetype'),url(../../hawtio-ui/dist/fonts/DroidSansMono-webfont.svg#DroidSansMonoRegular) format('svg');font-weight:400;font-style:normal}
-@font-face{font-family:'Droid Sans Mono Regular';src:url(../../hawtio-ui/dist/fonts/DroidSansMono-webfont.eot) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/DroidSansMono-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/DroidSansMono-webfont.ttf) format('truetype'),url(../../hawtio-ui/dist/fonts/DroidSansMono-webfont.svg#DroidSansMonoRegular) format('svg');font-weight:400;font-style:normal}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-Light-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Light-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Light-webfont.ttf) format('truetype');font-weight:300;font-style:normal}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-LightItalic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-LightItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-LightItalic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-LightItalic-webfont.ttf) format('truetype');font-weight:300;font-style:italic}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-Regular-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Regular-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Regular-webfont.ttf) format('truetype');font-weight:400;font-style:normal}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-Italic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Italic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Italic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Italic-webfont.ttf) format('truetype');font-weight:400;font-style:italic}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-Semibold-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Semibold-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Semibold-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Semibold-webfont.ttf) format('truetype');font-weight:600;font-style:normal}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-SemiboldItalic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-SemiboldItalic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-SemiboldItalic-webfont.ttf) format('truetype');font-weight:600;font-style:italic}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-Bold-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Bold-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Bold-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Bold-webfont.ttf) format('truetype');font-weight:700;font-style:normal}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-BoldItalic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-BoldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-BoldItalic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-BoldItalic-webfont.ttf) format('truetype');font-weight:700;font-style:italic}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBold-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBold-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBold-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBold-webfont.ttf) format('truetype');font-weight:800;font-style:normal}
-@font-face{font-family:OpenSans;src:url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBoldItalic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBoldItalic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBoldItalic-webfont.ttf) format('truetype');font-weight:800;font-style:italic}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-Light-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Light-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Light-webfont.ttf) format('truetype');font-weight:300;font-style:normal}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-LightItalic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-LightItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-LightItalic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-LightItalic-webfont.ttf) format('truetype');font-weight:300;font-style:italic}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-Regular-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Regular-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Regular-webfont.ttf) format('truetype');font-weight:400;font-style:normal}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-Italic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Italic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Italic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Italic-webfont.ttf) format('truetype');font-weight:400;font-style:italic}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-Semibold-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Semibold-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Semibold-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Semibold-webfont.ttf) format('truetype');font-weight:600;font-style:normal}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-SemiboldItalic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-SemiboldItalic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-SemiboldItalic-webfont.ttf) format('truetype');font-weight:600;font-style:italic}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-Bold-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-Bold-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-Bold-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-Bold-webfont.ttf) format('truetype');font-weight:700;font-style:normal}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-BoldItalic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-BoldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-BoldItalic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-BoldItalic-webfont.ttf) format('truetype');font-weight:700;font-style:italic}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBold-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBold-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBold-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBold-webfont.ttf) format('truetype');font-weight:800;font-style:normal}
-@font-face{font-family:'Open Sans';src:url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBoldItalic-webfont.eot);src:url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBoldItalic-webfont.woff) format('woff'),url(../../hawtio-ui/dist/fonts/OpenSans-ExtraBoldItalic-webfont.ttf) format('truetype');font-weight:800;font-style:italic}
+@font-face{font-family:DroidSansMonoRegular;src:url(fonts/DroidSansMono-webfont.eot) format('embedded-opentype'),url(fonts/DroidSansMono-webfont.woff) format('woff'),url(fonts/DroidSansMono-webfont.ttf) format('truetype'),url(fonts/DroidSansMono-webfont.svg#DroidSansMonoRegular) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:'Droid Sans Mono Regular';src:url(fonts/DroidSansMono-webfont.eot) format('embedded-opentype'),url(fonts/DroidSansMono-webfont.woff) format('woff'),url(fonts/DroidSansMono-webfont.ttf) format('truetype'),url(fonts/DroidSansMono-webfont.svg#DroidSansMonoRegular) format('svg');font-weight:400;font-style:normal}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-Light-webfont.eot);src:url(fonts/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Light-webfont.woff) format('woff'),url(fonts/OpenSans-Light-webfont.ttf) format('truetype');font-weight:300;font-style:normal}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-LightItalic-webfont.eot);src:url(fonts/OpenSans-LightItalic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-LightItalic-webfont.woff) format('woff'),url(fonts/OpenSans-LightItalic-webfont.ttf) format('truetype');font-weight:300;font-style:italic}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-Regular-webfont.eot);src:url(fonts/OpenSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Regular-webfont.woff) format('woff'),url(fonts/OpenSans-Regular-webfont.ttf) format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-Italic-webfont.eot);src:url(fonts/OpenSans-Italic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Italic-webfont.woff) format('woff'),url(fonts/OpenSans-Italic-webfont.ttf) format('truetype');font-weight:400;font-style:italic}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-Semibold-webfont.eot);src:url(fonts/OpenSans-Semibold-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Semibold-webfont.woff) format('woff'),url(fonts/OpenSans-Semibold-webfont.ttf) format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-SemiboldItalic-webfont.eot);src:url(fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-SemiboldItalic-webfont.woff) format('woff'),url(fonts/OpenSans-SemiboldItalic-webfont.ttf) format('truetype');font-weight:600;font-style:italic}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-Bold-webfont.eot);src:url(fonts/OpenSans-Bold-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Bold-webfont.woff) format('woff'),url(fonts/OpenSans-Bold-webfont.ttf) format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-BoldItalic-webfont.eot);src:url(fonts/OpenSans-BoldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-BoldItalic-webfont.woff) format('woff'),url(fonts/OpenSans-BoldItalic-webfont.ttf) format('truetype');font-weight:700;font-style:italic}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-ExtraBold-webfont.eot);src:url(fonts/OpenSans-ExtraBold-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-ExtraBold-webfont.woff) format('woff'),url(fonts/OpenSans-ExtraBold-webfont.ttf) format('truetype');font-weight:800;font-style:normal}
+@font-face{font-family:OpenSans;src:url(fonts/OpenSans-ExtraBoldItalic-webfont.eot);src:url(fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-ExtraBoldItalic-webfont.woff) format('woff'),url(fonts/OpenSans-ExtraBoldItalic-webfont.ttf) format('truetype');font-weight:800;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Light-webfont.eot);src:url(fonts/OpenSans-Light-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Light-webfont.woff) format('woff'),url(fonts/OpenSans-Light-webfont.ttf) format('truetype');font-weight:300;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-LightItalic-webfont.eot);src:url(fonts/OpenSans-LightItalic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-LightItalic-webfont.woff) format('woff'),url(fonts/OpenSans-LightItalic-webfont.ttf) format('truetype');font-weight:300;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Regular-webfont.eot);src:url(fonts/OpenSans-Regular-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Regular-webfont.woff) format('woff'),url(fonts/OpenSans-Regular-webfont.ttf) format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Italic-webfont.eot);src:url(fonts/OpenSans-Italic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Italic-webfont.woff) format('woff'),url(fonts/OpenSans-Italic-webfont.ttf) format('truetype');font-weight:400;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Semibold-webfont.eot);src:url(fonts/OpenSans-Semibold-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Semibold-webfont.woff) format('woff'),url(fonts/OpenSans-Semibold-webfont.ttf) format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-SemiboldItalic-webfont.eot);src:url(fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-SemiboldItalic-webfont.woff) format('woff'),url(fonts/OpenSans-SemiboldItalic-webfont.ttf) format('truetype');font-weight:600;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-Bold-webfont.eot);src:url(fonts/OpenSans-Bold-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-Bold-webfont.woff) format('woff'),url(fonts/OpenSans-Bold-webfont.ttf) format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-BoldItalic-webfont.eot);src:url(fonts/OpenSans-BoldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-BoldItalic-webfont.woff) format('woff'),url(fonts/OpenSans-BoldItalic-webfont.ttf) format('truetype');font-weight:700;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-ExtraBold-webfont.eot);src:url(fonts/OpenSans-ExtraBold-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-ExtraBold-webfont.woff) format('woff'),url(fonts/OpenSans-ExtraBold-webfont.ttf) format('truetype');font-weight:800;font-style:normal}
+@font-face{font-family:'Open Sans';src:url(fonts/OpenSans-ExtraBoldItalic-webfont.eot);src:url(fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix) format('embedded-opentype'),url(fonts/OpenSans-ExtraBoldItalic-webfont.woff) format('woff'),url(fonts/OpenSans-ExtraBoldItalic-webfont.ttf) format('truetype');font-weight:800;font-style:italic}
 #dynatree-drop-marker,span.dynatree-checkbox,span.dynatree-connector,span.dynatree-drag-helper-img,span.dynatree-empty,span.dynatree-expander,span.dynatree-icon,span.dynatree-radio,span.dynatree-vline{font-family:FontAwesome;font-weight:400;font-style:normal;display:inline-block;text-decoration:inherit;background-image:none;vertical-align:middle}
 .dynatree-checkbox{color:#888}
 span.dynatree-checkbox:before{margin-top:1px;background-position:0 0;cursor:pointer;content:""}
@@ -6705,37 +6705,37 @@ span:not(.dynatree-has-children) .dynatree-icon:before{font-family:FontAwesome;c
 [class*=" dynatree-folder icon-"]:before,[class^="dynatree-folder icon-"]:before{font-size:17px;margin-left:18px}
 [class*=" dynatree-folder icon-"] .dynatree-connector,[class^="dynatree-folder icon-"]{display:none}
 [class*=" dynatree-folder icon-"] .dynatree-icon,[class^="dynatree-folder icon-"]{display:none}
-span.org-apache-camel span.dynatree-icon:before,span.org-apache-camel-context-folder span.dynatree-icon:before{display:inline-block;background:url(../../hawtio-ui/img/icons/camel.svg);min-width:16px;min-height:16px;background-size:18px 18px;background-position:center;background-repeat:no-repeat;content:""!important}
-span.org-apache-camel-context span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/camel/camel_context_icon.png)}
-span.org-apache-camel-endpoints span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/camel/endpoint_node.png)}
-span.org-apache-camel-endpoints-folder span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/camel/endpoint_folder.png)}
-span.org-apache-camel-components-folder span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/camel/component_folder.png)}
-span.org-apache-camel-routes span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/camel/camel_route.png)}
-span.org-apache-camel-routes-folder span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/camel/camel_route_folder.png)}
-ul.dynatree-container li ul li ul li span[class*="_context_"] span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/camel/camel_context_icon.png)}
-i.org-apache-camel-endpoints-folder,span.org-apache-camel-endpoints-folder span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/camel/endpoint_folder.png)}
-i.org-apache-camel-endpoints,span.org-apache-camel-endpoints span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/camel/endpoint_node.png)}
+span.org-apache-camel span.dynatree-icon:before,span.org-apache-camel-context-folder span.dynatree-icon:before{display:inline-block;background:url(img/icons/camel.svg);min-width:16px;min-height:16px;background-size:18px 18px;background-position:center;background-repeat:no-repeat;content:""!important}
+span.org-apache-camel-context span.dynatree-icon:before{content:url(img/icons/camel/camel_context_icon.png)}
+span.org-apache-camel-endpoints span.dynatree-icon:before{content:url(img/icons/camel/endpoint_node.png)}
+span.org-apache-camel-endpoints-folder span.dynatree-icon:before{content:url(img/icons/camel/endpoint_folder.png)}
+span.org-apache-camel-components-folder span.dynatree-icon:before{content:url(img/icons/camel/component_folder.png)}
+span.org-apache-camel-routes span.dynatree-icon:before{content:url(img/icons/camel/camel_route.png)}
+span.org-apache-camel-routes-folder span.dynatree-icon:before{content:url(img/icons/camel/camel_route_folder.png)}
+ul.dynatree-container li ul li ul li span[class*="_context_"] span.dynatree-icon:before{content:url(img/icons/camel/camel_context_icon.png)}
+i.org-apache-camel-endpoints-folder,span.org-apache-camel-endpoints-folder span.dynatree-icon:before{content:url(img/icons/camel/endpoint_folder.png)}
+i.org-apache-camel-endpoints,span.org-apache-camel-endpoints span.dynatree-icon:before{content:url(img/icons/camel/endpoint_node.png)}
 span[class*="_FileConsumer"] span.dynatree-icon:before{content:"\f0c5"}
-span.org-apache-activemq span.dynatree-icon:before,span.org-apache-activemq-Broker span.dynatree-icon:before,span[class*="_Broker"] span.dynatree-icon:before{display:inline-block;background:url(../../hawtio-ui/img/icons/messagebroker.svg);min-width:16px;min-height:16px;background-size:18px 18px;background-position:center;background-repeat:no-repeat;content:""!important}
-i.org-apache-activemq-Queue,span.org-apache-activemq-Queue span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/activemq/queue.png)}
-i.org-apache-activemq-Queue-folder,span.org-apache-activemq-Queue-folder span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/activemq/queue_folder.png)}
-i.org-apache-activemq-Topic,span.org-apache-activemq-Topic span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/activemq/topic.png)}
-i.org-apache-activemq-Topic-folder,span.org-apache-activemq-Topic-folder span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/activemq/topic_folder.png)}
-span.quartz-scheduler span.dynatree-icon:before{content:url(../../hawtio-ui/img/icons/quartz/quarz.png)}
+span.org-apache-activemq span.dynatree-icon:before,span.org-apache-activemq-Broker span.dynatree-icon:before,span[class*="_Broker"] span.dynatree-icon:before{display:inline-block;background:url(img/icons/messagebroker.svg);min-width:16px;min-height:16px;background-size:18px 18px;background-position:center;background-repeat:no-repeat;content:""!important}
+i.org-apache-activemq-Queue,span.org-apache-activemq-Queue span.dynatree-icon:before{content:url(img/icons/activemq/queue.png)}
+i.org-apache-activemq-Queue-folder,span.org-apache-activemq-Queue-folder span.dynatree-icon:before{content:url(img/icons/activemq/queue_folder.png)}
+i.org-apache-activemq-Topic,span.org-apache-activemq-Topic span.dynatree-icon:before{content:url(img/icons/activemq/topic.png)}
+i.org-apache-activemq-Topic-folder,span.org-apache-activemq-Topic-folder span.dynatree-icon:before{content:url(img/icons/activemq/topic_folder.png)}
+span.quartz-scheduler span.dynatree-icon:before{content:url(img/icons/quartz/quarz.png)}
 ul.dynatree-container{font-size:10pt;white-space:nowrap;padding:0;margin:0;background-color:inherit;overflow:hidden;height:100%}
 ul.dynatree-container ul{padding:0 0 0 16px;margin:0}
 ul.dynatree-container li{list-style-image:none;list-style-position:outside;list-style-type:none;-moz-background-clip:border;-moz-background-inline-policy:continuous;-moz-background-origin:padding;background-attachment:scroll;background-color:transparent;background-position:0 0;background-repeat:repeat-y;background-image:none;margin:0;padding:1px 0 0 0}
 ul.dynatree-container li.dynatree-lastsib{background-image:none}
 ul.dynatree-no-connector>li{background-image:none}
 .ui-dynatree-disabled ul.dynatree-container{opacity:.5;background-color:silver}
-#dynatree-drop-marker,span.dynatree-checkbox,span.dynatree-connector,span.dynatree-drag-helper-img,span.dynatree-empty,span.dynatree-expander,span.dynatree-icon,span.dynatree-radio,span.dynatree-vline{width:16px;height:16px;display:inline-block;vertical-align:top;background-repeat:no-repeat;background-position:left;background-image:url(../../hawtio-ui/img/dynatree/icons.gif);background-position:0 0}
+#dynatree-drop-marker,span.dynatree-checkbox,span.dynatree-connector,span.dynatree-drag-helper-img,span.dynatree-empty,span.dynatree-expander,span.dynatree-icon,span.dynatree-radio,span.dynatree-vline{width:16px;height:16px;display:inline-block;vertical-align:top;background-repeat:no-repeat;background-position:left;background-image:url(img/dynatree/icons.gif);background-position:0 0}
 ul.dynatree-container img{width:16px;height:16px;margin-left:3px;vertical-align:top;border-style:none}
 span.dynatree-connector{background-image:none}
 span.dynatree-expander{background-position:0 -80px;cursor:pointer}
 span.dynatree-expander:hover{background-position:-16px -80px}
 .dynatree-exp-e span.dynatree-expander,.dynatree-exp-ed span.dynatree-expander,.dynatree-exp-edl span.dynatree-expander,.dynatree-exp-el span.dynatree-expander{background-position:-32px -80px}
 .dynatree-exp-e span.dynatree-expander:hover,.dynatree-exp-ed span.dynatree-expander:hover,.dynatree-exp-edl span.dynatree-expander:hover,.dynatree-exp-el span.dynatree-expander:hover{background-position:-48px -80px}
-.dynatree-loading span.dynatree-expander{background-position:0 0;background-image:url(../../hawtio-ui/img/dynatree/loading.gif)}
+.dynatree-loading span.dynatree-expander{background-position:0 0;background-image:url(img/dynatree/loading.gif)}
 span.dynatree-checkbox{margin-left:3px;background-position:0 -32px}
 span.dynatree-checkbox:hover{background-position:-16px -32px}
 .dynatree-partsel span.dynatree-checkbox{background-position:-64px -32px}
@@ -6751,7 +6751,7 @@ span.dynatree-radio:hover{background-position:-16px -48px}
 span.dynatree-icon{margin-left:3px;background-position:0 0}
 .dynatree-ico-cf span.dynatree-icon{background-position:0 -16px}
 .dynatree-ico-ef span.dynatree-icon{background-position:-64px -16px}
-.dynatree-statusnode-wait span.dynatree-icon{background-image:url(../../hawtio-ui/img/dynatree/loading.gif)}
+.dynatree-statusnode-wait span.dynatree-icon{background-image:url(img/dynatree/loading.gif)}
 .dynatree-statusnode-error span.dynatree-icon{background-position:0 -112px}
 ul.dynatree-container a{color:#000;text-decoration:none;vertical-align:top;margin:0;margin-left:3px;border:1px solid #fff}
 ul.dynatree-container a:hover{background:#f2f7fd;border-color:#b8d6fb}
