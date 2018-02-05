@@ -77,7 +77,7 @@ gulp.task('tsc', function() {
         prepend: '/// <reference path="',
         append: '"/>'
       }))
-      .pipe(gulp.dest('.'));    
+      .pipe(gulp.dest('.'));
 });
 
 gulp.task('tslint', function(){
@@ -329,6 +329,8 @@ gulp.task('copy-images', ['404', 'tweak-urls'], function() {
   });
   // Add PatternFly images package in dist
   patterns.push('libs/patternfly/dist/img/**');
+  // Add Dynatree icons
+  patterns.push('libs/jquery.dynatree/dist/skin/icons.gif');
   return gulp.src(patterns)
            .pipe(plugins.debug({ title: 'img-copy' }))
            .pipe(plugins.chmod(0o644))
