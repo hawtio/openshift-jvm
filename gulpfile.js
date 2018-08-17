@@ -207,9 +207,9 @@ gulp.task('connect', ['watch', 'collect-dep-versions'], function() {
     port: 2772,
     staticProxies: [
     {
-      port: 8181,
+      port: 8778,
       path: '/jolokia',
-      targetPath: '/hawtio/jolokia'
+      targetPath: '/jolokia'
     }
     ],
     staticAssets: staticAssets,

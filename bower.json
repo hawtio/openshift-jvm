@@ -17,6 +17,7 @@
     "patternfly": "3.19.0",
     "hawtio-integration": "~2.2.0",
     "hawtio-preferences": "~2.0.0",
+    "hawtio-artemis": "^0.5.0",
     "angular": "1.5.11",
     "angular-sanitize": "1.5.11",
     "codemirror": "5.19.0"
