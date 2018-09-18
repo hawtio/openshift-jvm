@@ -8,6 +8,6 @@ git config --global user.email "circleci@mail.com" && \
 git config --global user.name "circleci" && \
 echo "Cleaning and rebuilding" && \
 rm -Rf site/* && \
-gulp build && \
-gulp site && \
-gulp deploy
+npm run build && \
+npm run site && \
+npm run deploy

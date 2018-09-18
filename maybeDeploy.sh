@@ -16,9 +16,9 @@ then
   git config --global user.name "circleci" && \
   echo "Cleaning and rebuilding" && \
   rm -Rf site/* && \
-  gulp build && \
-  gulp site && \
-  gulp deploy && \
+  npm run build && \
+  npm run site && \
+  npm run deploy && \
   echo $CURRENT > LATEST && \
   git add LATEST && \
   git commit -m "[ci skip] Updating latest tag" && \
