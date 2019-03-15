@@ -11,7 +11,7 @@
   "devDependencies": {
     "@hawtio/node-backend": "^3.1.4",
     "del": "^3.0.0",
-    "event-stream": "^3.3.6",
+    "event-stream": "^4.0.1",
     "gh-pages": "^1.2.0",
     "gulp": "^3.0.0",
     "gulp-angular-templatecache": "^2.2.1",
@@ -39,6 +39,7 @@
     "gulp-typescript": "^4.0.0",
     "gulp-uglify": "^3.0.1",
     "gulp-usemin": "^0.3.29",
+    "natives": "^1.1.6",
     "tslint": "^5.11.0",
     "typescript": "^3.0.3",
     "urljoin": "~0.1.0",
